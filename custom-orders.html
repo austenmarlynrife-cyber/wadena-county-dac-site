@@ -1,0 +1,260 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Custom Buttons, Pins & Napkins • Wadena County DAC</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <a class="skip-link" href="#main">Skip to main content</a>
+
+  <header class="site-header">
+    <div class="wrap header-inner">
+      <a class="brand" href="index.html" aria-label="Wadena County DAC home">
+        <img class="brand-logo" src="images/wcdac-logo.svg" alt="Wadena County DAC logo" />
+      </a>
+
+      <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="primary-nav">
+        <span class="sr-only">Menu</span>
+        <span class="hamburger" aria-hidden="true"></span>
+      </button>
+
+      <nav id="primary-nav" class="primary-nav" aria-label="Primary navigation">
+        <div class="links">
+          <details class="dd">
+            <summary>About</summary>
+            <div class="dd-menu">
+              <a href="index.html#mission">Mission</a>
+              <a href="index.html#staff">Staff</a>
+              <a href="index.html#contact">Contact</a>
+            </div>
+          </details>
+
+          <details class="dd">
+            <summary>Programs</summary>
+            <div class="dd-menu">
+              <a href="index.html#programs">Services &amp; Activities</a>
+              <a href="index.html#eligibility">Eligibility / Referrals</a>
+              <a href="index.html#transportation">Transportation</a>
+              <a href="custom-orders.html">Custom Products</a>
+            </div>
+          </details>
+
+          <a href="events.html">Events</a>
+          <a href="announcements.html">Updates</a>
+
+          <details class="dd">
+            <summary>Support</summary>
+            <div class="dd-menu">
+              <a href="https://www.givemn.org/organization/wadena-county-developmental-achievement-center" target="_blank" rel="noopener">Donate</a>
+              <a href="volunteer.html">Volunteer</a>
+              <a href="apply.html">Apply Now</a>
+            </div>
+          </details>
+        </div>
+      </nav>
+
+      <a class="btn nav-cta" href="index.html">Home</a>
+    </div>
+  </header>
+
+  <main id="main">
+    <div class="wrap">
+      <section class="card pad hover form-page">
+        <div class="kicker"><span class="dot"></span> Fundraising & Events</div>
+        <h1>Custom Buttons, Pins & Napkins</h1>
+        <p class="sub">We create custom products for campaign teams, sports programs, weddings, graduation parties, and community events. Orders help support programs at Wadena County DAC.</p>
+
+        <div class="product-grid mt-2" aria-label="Custom product categories">
+          <article class="product-card" id="buttons-pins">
+            <img class="product-media" src="images/custom-buttons-pins.svg" alt="Sample custom campaign and sports buttons and pins." loading="lazy" />
+            <h3>Custom Buttons & Pins</h3>
+            <p class="sub">Great for campaigns, teams, clubs, schools, and event promotions.</p>
+            <ul class="price-list">
+              <li><strong>1.25 inch pin-back buttons</strong></li>
+              <li>50 count: $65</li>
+              <li>100 count: $110</li>
+              <li>250 count: $240</li>
+              <li>One digital proof included</li>
+            </ul>
+          </article>
+
+          <article class="product-card" id="napkins">
+            <img class="product-media" src="images/custom-napkins.svg" alt="Sample custom wedding and graduation napkins." loading="lazy" />
+            <h3>Custom Napkins</h3>
+            <p class="sub">Perfect for weddings, graduations, open houses, and milestone events.</p>
+            <ul class="price-list">
+              <li><strong>Beverage Napkins</strong></li>
+              <li>100 count: $55</li>
+              <li>250 count: $120</li>
+              <li>500 count: $210</li>
+              <li>Foil/ink upgrades available</li>
+            </ul>
+          </article>
+        </div>
+
+        <p class="form-note">Need a larger run, mixed products, or rush turnaround? Ask in the form below and we will send a custom quote.</p>
+        <hr class="sep" />
+
+        <!--
+          FORM EMAIL SETUP
+          1) Create a free form at https://formspree.io with notifications to roseb@wcdac.com
+          2) Replace CUSTOM_ORDER_FORM_ID below with your Formspree ID.
+          Until then, submit uses your default email client with a pre-filled message.
+        -->
+        <form id="orderForm" action="https://formspree.io/f/CUSTOM_ORDER_FORM_ID" method="POST">
+          <input type="hidden" name="_subject" value="New Custom Product Order Inquiry — Wadena County DAC" />
+
+          <div class="form-section">
+            <h3>Contact Information</h3>
+            <div class="form-row">
+              <div class="form-group">
+                <label for="o-name">Full Name <span class="req">*</span></label>
+                <input type="text" id="o-name" name="name" required autocomplete="name" />
+              </div>
+              <div class="form-group">
+                <label for="o-org">Organization / School / Campaign</label>
+                <input type="text" id="o-org" name="organization" />
+              </div>
+            </div>
+            <div class="form-row">
+              <div class="form-group">
+                <label for="o-email">Email <span class="req">*</span></label>
+                <input type="email" id="o-email" name="email" required autocomplete="email" />
+              </div>
+              <div class="form-group">
+                <label for="o-phone">Phone</label>
+                <input type="tel" id="o-phone" name="phone" autocomplete="tel" />
+              </div>
+            </div>
+          </div>
+
+          <div class="form-section">
+            <h3>Order Details</h3>
+            <div class="form-row">
+              <div class="form-group">
+                <label for="o-product">Product Type <span class="req">*</span></label>
+                <select id="o-product" name="product_type" required>
+                  <option value="">- Select -</option>
+                  <option value="Buttons/Pins">Buttons/Pins</option>
+                  <option value="Napkins">Napkins</option>
+                  <option value="Both">Both</option>
+                </select>
+              </div>
+              <div class="form-group">
+                <label for="o-qty">Estimated Quantity <span class="req">*</span></label>
+                <input type="text" id="o-qty" name="quantity" required placeholder="e.g. 100 buttons" />
+              </div>
+            </div>
+            <div class="form-row">
+              <div class="form-group">
+                <label for="o-date">Needed By</label>
+                <input type="date" id="o-date" name="needed_by" />
+              </div>
+              <div class="form-group">
+                <label for="o-budget">Target Budget</label>
+                <input type="text" id="o-budget" name="budget" placeholder="Optional" />
+              </div>
+            </div>
+            <div class="form-group">
+              <label for="o-notes">Design Notes / Text / Colors <span class="req">*</span></label>
+              <textarea id="o-notes" name="design_notes" required rows="6" maxlength="1200" placeholder="Tell us your event, wording, colors, logo ideas, and anything you want printed."></textarea>
+            </div>
+          </div>
+
+          <div class="form-actions">
+            <button type="submit" class="btn primary">Send Order Inquiry</button>
+            <span class="form-note">Questions now? Email roseb@wcdac.com or call 218-837-5182.</span>
+          </div>
+        </form>
+
+        <div id="order-success" class="form-success" hidden>
+          <div class="fs-title">Thanks, we received your inquiry.</div>
+          <div class="fs-body" id="order-success-msg">Your custom order request has been submitted. Our team will follow up soon with next steps and pricing confirmation.</div>
+        </div>
+      </section>
+    </div>
+  </main>
+
+  <footer>
+    <div class="wrap">© <span id="year"></span> Wadena County DAC</div>
+  </footer>
+
+  <script>document.getElementById("year").textContent = new Date().getFullYear();</script>
+  <script>
+  (function () {
+    var form = document.getElementById('orderForm');
+    var succ = document.getElementById('order-success');
+    var msg  = document.getElementById('order-success-msg');
+    if (!form) return;
+
+    form.addEventListener('submit', function (e) {
+      e.preventDefault();
+
+      var isConfigured = form.action.indexOf('CUSTOM_ORDER_FORM_ID') === -1;
+
+      if (isConfigured) {
+        var btn = form.querySelector('[type=submit]');
+        btn.disabled = true;
+        btn.textContent = 'Sending...';
+
+        fetch(form.action, {
+          method: 'POST',
+          body: new FormData(form),
+          headers: { 'Accept': 'application/json' }
+        }).then(function (resp) {
+          if (resp.ok) {
+            form.hidden = true;
+            succ.hidden = false;
+          } else {
+            btn.disabled = false;
+            btn.textContent = 'Send Order Inquiry';
+            alert('Submission failed. Please try again or email roseb@wcdac.com.');
+          }
+        }).catch(function () {
+          btn.disabled = false;
+          btn.textContent = 'Send Order Inquiry';
+          alert('Network error. Please email roseb@wcdac.com directly.');
+        });
+      } else {
+        var fd = new FormData(form);
+        var data = {};
+        fd.forEach(function (v, k) {
+          if (k.startsWith('_')) return;
+          data[k] = data[k] ? data[k] + ', ' + v : v;
+        });
+
+        var body = [
+          'CUSTOM ORDER INQUIRY - WADENA COUNTY DAC',
+          '=========================================',
+          'Name          : ' + (data.name || ''),
+          'Organization  : ' + (data.organization || ''),
+          'Email         : ' + (data.email || ''),
+          'Phone         : ' + (data.phone || ''),
+          '',
+          'Product Type  : ' + (data.product_type || ''),
+          'Quantity      : ' + (data.quantity || ''),
+          'Needed By     : ' + (data.needed_by || ''),
+          'Budget        : ' + (data.budget || ''),
+          '',
+          'Design Notes:',
+          data.design_notes || ''
+        ].join('\n');
+
+        window.location.href = 'mailto:roseb@wcdac.com'
+          + '?subject=' + encodeURIComponent('Custom Product Order Inquiry - Wadena County DAC')
+          + '&body=' + encodeURIComponent(body);
+
+        setTimeout(function () {
+          form.hidden = true;
+          succ.hidden = false;
+          msg.textContent = 'Your email client should have opened with your order details pre-filled. Please review and click Send to complete your inquiry.';
+        }, 700);
+      }
+    });
+  }());
+  </script>
+  <script src="app.js"></script>
+</body>
+</html>
