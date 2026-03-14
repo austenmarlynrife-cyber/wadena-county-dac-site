@@ -269,6 +269,8 @@ h2{margin:0 0 10px; font-size:22px; color:#0a1930}
 .list{display:grid; gap:10px}
 .item{padding:14px; border-radius:16px; border:1px solid var(--border); background: rgba(255,255,255,.28); backdrop-filter: blur(8px) saturate(120%); -webkit-backdrop-filter: blur(8px) saturate(120%); transition: transform .18s ease, box-shadow .18s ease, border-color .18s ease;}
 .item:hover{transform: translateY(-2px); box-shadow: 0 12px 26px rgba(15,23,42,.08); border-color: rgba(37,99,235,.18);}
+.item-link{display:block; color:inherit;}
+.item-link:focus-visible{outline:none; box-shadow: 0 0 0 3px rgba(37,99,235,.22), 0 12px 26px rgba(15,23,42,.08); border-color: rgba(37,99,235,.35);}
 .item .top{display:flex; justify-content:space-between; gap:10px; flex-wrap:wrap}
 .item .title{font-weight:850}
 .item .meta{color:#33465f; font-size:13px; font-weight:600}

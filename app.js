@@ -50,6 +50,40 @@ function initNavToggle(){
   });
 }
 
+function initClickSound(){
+  let audioCtx = null;
+
+  const playClick = () => {
+    const AudioCtx = window.AudioContext || window.webkitAudioContext;
+    if(!AudioCtx) return;
+    if(!audioCtx) audioCtx = new AudioCtx();
+    if(audioCtx.state === "suspended") audioCtx.resume();
+
+    const now = audioCtx.currentTime;
+    const osc = audioCtx.createOscillator();
+    const gain = audioCtx.createGain();
+
+    osc.type = "square";
+    osc.frequency.setValueAtTime(1300, now);
+    osc.frequency.exponentialRampToValueAtTime(700, now + 0.025);
+
+    gain.gain.setValueAtTime(0.0001, now);
+    gain.gain.exponentialRampToValueAtTime(0.045, now + 0.004);
+    gain.gain.exponentialRampToValueAtTime(0.0001, now + 0.035);
+
+    osc.connect(gain);
+    gain.connect(audioCtx.destination);
+    osc.start(now);
+    osc.stop(now + 0.04);
+  };
+
+  document.addEventListener("pointerdown", (event) => {
+    const target = event.target.closest("a, button, summary, .cell, .item-link");
+    if(!target) return;
+    playClick();
+  }, { passive: true });
+}
+
 /* Home */
 async function renderHome(){
   const annEl = document.getElementById("homeAnnouncements");
@@ -251,6 +285,7 @@ async function renderEventsCalendar(){
 
 document.addEventListener("DOMContentLoaded", async () => {
   initNavToggle();
+  initClickSound();
   try{
     await renderHome();
     await renderAnnouncements();
