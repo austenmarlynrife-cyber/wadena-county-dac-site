@@ -282,6 +282,9 @@ h2{margin:0 0 10px; font-size:22px; color:#0a1930}
   gap:14px;
   margin-top:14px;
 }
+.gallery-link{display:block; color:inherit;}
+.gallery-link:focus-visible{outline:none;}
+.gallery-link:focus-visible .gallery-card{box-shadow: 0 0 0 3px rgba(37,99,235,.22), 0 10px 20px rgba(15,23,42,.15); border-color: rgba(37,99,235,.30);}
 .gallery-card{
   margin:0;
   padding:10px;
@@ -305,6 +308,7 @@ h2{margin:0 0 10px; font-size:22px; color:#0a1930}
   font-size:14px;
   font-weight:700;
 }
+.facebook-callout .form-note{margin-top:8px;}
 
 hr.sep{border:none; border-top:1px solid var(--border); margin:14px 0}
 

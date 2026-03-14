@@ -22,6 +22,35 @@ function escapeHtml(str){
     .replaceAll("'","&#039;");
 }
 
+// Set this once and all Facebook photo links on the site will use it.
+const FACEBOOK_PHOTOS_URL = "https://www.facebook.com/WadenacoDAC/photos/";
+
+function initFacebookPhotoLinks(){
+  const links = Array.from(document.querySelectorAll("[data-facebook-photos-link]"));
+  if(!links.length) return;
+
+  const status = document.getElementById("fbPhotosStatus");
+  const url = (FACEBOOK_PHOTOS_URL || "").trim();
+
+  if(!url){
+    links.forEach(link => {
+      link.setAttribute("href", "#");
+      link.setAttribute("aria-disabled", "true");
+      link.addEventListener("click", (event) => event.preventDefault());
+    });
+    if(status) status.textContent = "Set FACEBOOK_PHOTOS_URL in app.js to connect your live Facebook photos.";
+    return;
+  }
+
+  links.forEach(link => {
+    link.setAttribute("href", url);
+    link.setAttribute("target", "_blank");
+    link.setAttribute("rel", "noopener noreferrer");
+    link.removeAttribute("aria-disabled");
+  });
+  if(status) status.textContent = "Opens your Facebook photos in a new tab.";
+}
+
 function initNavToggle(){
   const header = document.querySelector(".site-header");
   const toggle = document.querySelector(".nav-toggle");
@@ -286,6 +315,7 @@ async function renderEventsCalendar(){
 document.addEventListener("DOMContentLoaded", async () => {
   initNavToggle();
   initClickSound();
+  initFacebookPhotoLinks();
   try{
     await renderHome();
     await renderAnnouncements();
