@@ -1,0 +1,407 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Apply Now • Wadena County DAC</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <a class="skip-link" href="#main">Skip to main content</a>
+
+  <header class="site-header">
+    <div class="wrap header-inner">
+      <a class="brand" href="index.html" aria-label="Wadena County DAC home">
+        <img class="brand-logo" src="images/wcdac-logo.svg" alt="Wadena County DAC logo" />
+      </a>
+
+      <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="primary-nav">
+        <span class="sr-only">Menu</span>
+        <span class="hamburger" aria-hidden="true"></span>
+      </button>
+
+      <nav id="primary-nav" class="primary-nav" aria-label="Primary navigation">
+        <div class="links">
+          <details class="dd">
+            <summary>About</summary>
+            <div class="dd-menu">
+              <a href="index.html#mission">Mission</a>
+              <a href="index.html#staff">Staff</a>
+              <a href="index.html#contact">Contact</a>
+            </div>
+          </details>
+          <details class="dd">
+            <summary>Programs</summary>
+            <div class="dd-menu">
+              <a href="index.html#programs">Services &amp; Activities</a>
+              <a href="index.html#eligibility">Eligibility / Referrals</a>
+              <a href="index.html#transportation">Transportation</a>
+            </div>
+          </details>
+          <a href="events.html">Events</a>
+          <a href="announcements.html">Updates</a>
+          <details class="dd">
+            <summary>Support</summary>
+            <div class="dd-menu">
+              <a href="https://www.givemn.org/organization/wadena-county-developmental-achievement-center" target="_blank" rel="noopener">Donate</a>
+              <a href="volunteer.html">Volunteer</a>
+              <a href="apply.html">Apply Now</a>
+            </div>
+          </details>
+        </div>
+      </nav>
+
+      <a class="btn nav-cta" href="index.html">Home</a>
+    </div>
+  </header>
+
+  <main id="main">
+    <div class="wrap">
+      <div class="card pad hover form-page">
+        <div class="kicker"><span class="dot"></span> Join Our Team</div>
+        <h1>Employment Application</h1>
+        <p class="sub">We're always looking for caring, dependable people who want to make a real difference. Fill out the application below — all sections help us get to know you better. Questions? Call <strong>(218) 837-5195</strong> or email <strong>roseb@wcdac.com</strong>.</p>
+
+        <hr class="sep" />
+
+        <!--
+          FORM EMAIL SETUP
+          ─────────────────────────────────────────────────────────
+          Right now, Submit opens your default email client as a fallback.
+          To have applications delivered silently to roseb@wcdac.com instead:
+            1. Go to https://formspree.io and create a free account.
+            2. Click "New Form" and set the notification email to roseb@wcdac.com.
+            3. Copy the Form ID shown (e.g. "xabcdefg").
+            4. In the <form> tag below, replace APPLY_FORM_ID with that ID.
+          ─────────────────────────────────────────────────────────
+        -->
+        <form id="applyForm" action="https://formspree.io/f/APPLY_FORM_ID" method="POST">
+          <input type="hidden" name="_subject" value="New Employment Application — Wadena County DAC" />
+
+          <!-- 1. Personal Information -->
+          <div class="form-section">
+            <h3>1. Personal Information</h3>
+            <div class="form-row">
+              <div class="form-group">
+                <label for="a-first">First Name <span class="req">*</span></label>
+                <input type="text" id="a-first" name="first_name" required autocomplete="given-name" />
+              </div>
+              <div class="form-group">
+                <label for="a-last">Last Name <span class="req">*</span></label>
+                <input type="text" id="a-last" name="last_name" required autocomplete="family-name" />
+              </div>
+            </div>
+            <div class="form-row">
+              <div class="form-group">
+                <label for="a-email">Email Address <span class="req">*</span></label>
+                <input type="email" id="a-email" name="email" required autocomplete="email" />
+              </div>
+              <div class="form-group">
+                <label for="a-phone">Phone Number <span class="req">*</span></label>
+                <input type="tel" id="a-phone" name="phone" required autocomplete="tel" />
+              </div>
+            </div>
+            <div class="form-group">
+              <label for="a-address">Street Address</label>
+              <input type="text" id="a-address" name="address" autocomplete="street-address" />
+            </div>
+            <div class="form-row-3">
+              <div class="form-group">
+                <label for="a-city">City</label>
+                <input type="text" id="a-city" name="city" autocomplete="address-level2" />
+              </div>
+              <div class="form-group">
+                <label for="a-state">State</label>
+                <input type="text" id="a-state" name="state" value="MN" autocomplete="address-level1" />
+              </div>
+              <div class="form-group">
+                <label for="a-zip">ZIP Code</label>
+                <input type="text" id="a-zip" name="zip" autocomplete="postal-code" />
+              </div>
+            </div>
+          </div>
+
+          <!-- 2. Position Details -->
+          <div class="form-section">
+            <h3>2. Position Details</h3>
+            <div class="form-row">
+              <div class="form-group">
+                <label for="a-position">Position Applied For <span class="req">*</span></label>
+                <input type="text" id="a-position" name="position" required
+                  placeholder="e.g. Direct Support Professional" />
+              </div>
+              <div class="form-group">
+                <label for="a-type">Employment Type <span class="req">*</span></label>
+                <select id="a-type" name="employment_type" required>
+                  <option value="">— Select —</option>
+                  <option>Full-Time</option>
+                  <option>Part-Time</option>
+                  <option>Either / Open</option>
+                  <option>Seasonal / Temporary</option>
+                </select>
+              </div>
+            </div>
+            <div class="form-row">
+              <div class="form-group">
+                <label for="a-start">Earliest Available Start Date</label>
+                <input type="date" id="a-start" name="start_date" />
+              </div>
+              <div class="form-group">
+                <label>Authorized to work in the U.S.? <span class="req">*</span></label>
+                <div class="check-group" style="margin-top:12px">
+                  <label><input type="radio" name="work_auth" value="Yes" required /> Yes</label>
+                  <label><input type="radio" name="work_auth" value="No" /> No</label>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- 3. Education -->
+          <div class="form-section">
+            <h3>3. Education</h3>
+            <div class="form-row">
+              <div class="form-group">
+                <label for="a-edu">Highest Level Completed <span class="req">*</span></label>
+                <select id="a-edu" name="education_level" required>
+                  <option value="">— Select —</option>
+                  <option>Some High School</option>
+                  <option>High School Diploma / GED</option>
+                  <option>Some College</option>
+                  <option>Associate's Degree</option>
+                  <option>Bachelor's Degree</option>
+                  <option>Graduate Degree</option>
+                  <option>Vocational / Technical Certification</option>
+                </select>
+              </div>
+              <div class="form-group">
+                <label for="a-school">School / Institution</label>
+                <input type="text" id="a-school" name="school" />
+              </div>
+            </div>
+            <div class="form-group">
+              <label for="a-field">Field of Study or Program</label>
+              <input type="text" id="a-field" name="field_of_study"
+                placeholder="e.g. Human Services, Education, Health Sciences" />
+            </div>
+          </div>
+
+          <!-- 4. Work History -->
+          <div class="form-section">
+            <h3>4. Work History</h3>
+            <p class="form-note" style="margin-bottom:10px">List your two most recent positions. Include employer name, dates, job title, and a brief description of your duties.</p>
+            <div class="form-group">
+              <label for="a-work1">Most Recent Position</label>
+              <textarea id="a-work1" name="work_history_1" rows="4"
+                placeholder="Employer:&#10;Dates (from — to):&#10;Title:&#10;Duties:"
+                maxlength="500"></textarea>
+            </div>
+            <div class="form-group">
+              <label for="a-work2">Previous Position</label>
+              <textarea id="a-work2" name="work_history_2" rows="4"
+                placeholder="Employer:&#10;Dates (from — to):&#10;Title:&#10;Duties:"
+                maxlength="500"></textarea>
+            </div>
+          </div>
+
+          <!-- 5. Skills & Certifications -->
+          <div class="form-section">
+            <h3>5. Skills &amp; Certifications</h3>
+            <div class="form-group">
+              <label>Relevant certifications or training <em class="form-note">(check all that apply)</em></label>
+              <div class="check-group">
+                <label><input type="checkbox" name="certs" value="CPR / First Aid" /> CPR / First Aid</label>
+                <label><input type="checkbox" name="certs" value="Medication Administration" /> Medication Administration</label>
+                <label><input type="checkbox" name="certs" value="DSP Certification" /> DSP Certification</label>
+                <label><input type="checkbox" name="certs" value="CNA" /> CNA</label>
+                <label><input type="checkbox" name="certs" value="Valid Driver's License" /> Valid Driver's License</label>
+                <label><input type="checkbox" name="certs" value="Other" /> Other</label>
+              </div>
+            </div>
+            <div class="form-group">
+              <label for="a-skills">Additional Skills or Qualifications</label>
+              <textarea id="a-skills" name="skills" rows="3"
+                placeholder="Any other relevant skills, languages, software knowledge, etc."
+                maxlength="400"></textarea>
+            </div>
+          </div>
+
+          <!-- 6. References -->
+          <div class="form-section">
+            <h3>6. References</h3>
+            <p class="form-note" style="margin-bottom:10px">Provide two professional references (not family members). Include name, relationship, and contact information.</p>
+            <div class="form-group">
+              <label for="a-ref1">Reference 1</label>
+              <textarea id="a-ref1" name="reference_1" rows="3"
+                placeholder="Name:&#10;Relationship:&#10;Phone / Email:"
+                maxlength="250"></textarea>
+            </div>
+            <div class="form-group">
+              <label for="a-ref2">Reference 2</label>
+              <textarea id="a-ref2" name="reference_2" rows="3"
+                placeholder="Name:&#10;Relationship:&#10;Phone / Email:"
+                maxlength="250"></textarea>
+            </div>
+          </div>
+
+          <!-- 7. Personal Statement -->
+          <div class="form-section">
+            <h3>7. Why Wadena County DAC?</h3>
+            <div class="form-group">
+              <label for="a-why">Why do you want to work here, and what do you hope to contribute? <span class="req">*</span></label>
+              <textarea id="a-why" name="statement" required rows="5"
+                placeholder="Tell us what motivates you and why this position is a good fit…"
+                maxlength="700"></textarea>
+            </div>
+          </div>
+
+          <!-- 8. Certification -->
+          <div class="form-section">
+            <h3>8. Certification</h3>
+            <p class="sub" style="font-size:13px;margin-bottom:14px">By typing your name below, you certify that the information provided in this application is true and complete to the best of your knowledge.</p>
+            <div class="form-row">
+              <div class="form-group">
+                <label for="a-sig">Signature (type your full name) <span class="req">*</span></label>
+                <input type="text" id="a-sig" name="signature" required placeholder="Your full name" autocomplete="name" />
+              </div>
+              <div class="form-group">
+                <label for="a-date">Date</label>
+                <input type="date" id="a-date" name="signature_date" />
+              </div>
+            </div>
+          </div>
+
+          <div class="form-actions">
+            <button type="submit" class="btn primary">Submit Application</button>
+            <span class="form-note">Questions? Call (218) 837-5195 or email roseb@wcdac.com.</span>
+          </div>
+        </form>
+
+        <div id="apply-success" class="form-success" hidden>
+          <div class="fs-title">Application Received!</div>
+          <div class="fs-body" id="apply-success-msg">Thank you for applying to Wadena County DAC. We review all applications and will be in contact if your qualifications match a current opening. We appreciate your interest in joining our team!</div>
+        </div>
+      </div>
+    </div>
+  </main>
+
+  <footer>
+    <div class="wrap">© <span id="year"></span> Wadena County DAC</div>
+  </footer>
+
+  <script>document.getElementById("year").textContent = new Date().getFullYear();</script>
+  <script>
+  (function () {
+    var form = document.getElementById('applyForm');
+    var succ = document.getElementById('apply-success');
+    var msg  = document.getElementById('apply-success-msg');
+    if (!form) return;
+
+    /* Pre-fill today's date in the certification section */
+    var dateField = document.getElementById('a-date');
+    if (dateField && !dateField.value) {
+      dateField.value = new Date().toISOString().split('T')[0];
+    }
+
+    form.addEventListener('submit', function (e) {
+      e.preventDefault();
+
+      var isConfigured = form.action.indexOf('APPLY_FORM_ID') === -1;
+
+      if (isConfigured) {
+        /* ── Formspree AJAX submission ── */
+        var btn = form.querySelector('[type=submit]');
+        btn.disabled = true;
+        btn.textContent = 'Sending…';
+        fetch(form.action, {
+          method: 'POST',
+          body: new FormData(form),
+          headers: { 'Accept': 'application/json' }
+        }).then(function (resp) {
+          if (resp.ok) {
+            form.hidden = true;
+            succ.hidden = false;
+          } else {
+            btn.disabled = false;
+            btn.textContent = 'Submit Application';
+            alert('Submission failed. Please try again or email us at roseb@wcdac.com.');
+          }
+        }).catch(function () {
+          btn.disabled = false;
+          btn.textContent = 'Submit Application';
+          alert('Network error. Please email your application directly to roseb@wcdac.com.');
+        });
+
+      } else {
+        /* ── mailto: fallback (Formspree not yet configured) ── */
+        var fd   = new FormData(form);
+        var data = {};
+        fd.forEach(function (v, k) {
+          if (k.startsWith('_')) return;
+          data[k] = data[k] ? data[k] + ', ' + v : v;
+        });
+
+        var addr = [data.address, data.city, data.state, data.zip].filter(Boolean).join(', ');
+        var body = [
+          'EMPLOYMENT APPLICATION — WADENA COUNTY DAC',
+          '=============================================',
+          '',
+          '[ PERSONAL INFORMATION ]',
+          'Name    : ' + (data.first_name || '') + ' ' + (data.last_name || ''),
+          'Email   : ' + (data.email || ''),
+          'Phone   : ' + (data.phone || ''),
+          'Address : ' + (addr || '(not provided)'),
+          '',
+          '[ POSITION ]',
+          'Position   : ' + (data.position || ''),
+          'Type       : ' + (data.employment_type || ''),
+          'Start Date : ' + (data.start_date || ''),
+          'Work Auth  : ' + (data.work_auth || ''),
+          '',
+          '[ EDUCATION ]',
+          'Level  : ' + (data.education_level || ''),
+          'School : ' + (data.school || ''),
+          'Field  : ' + (data.field_of_study || ''),
+          '',
+          '[ WORK HISTORY ]',
+          'Position 1:',
+          (data.work_history_1 || '(none)'),
+          '',
+          'Position 2:',
+          (data.work_history_2 || '(none)'),
+          '',
+          '[ CERTIFICATIONS ]',
+          (data.certs || 'None selected'),
+          '',
+          '[ SKILLS ]',
+          (data.skills || '(none)'),
+          '',
+          '[ REFERENCES ]',
+          'Ref 1: ' + (data.reference_1 || '').replace(/\n/g, ' | '),
+          'Ref 2: ' + (data.reference_2 || '').replace(/\n/g, ' | '),
+          '',
+          '[ PERSONAL STATEMENT ]',
+          (data.statement || ''),
+          '',
+          '[ CERTIFICATION ]',
+          'Signature : ' + (data.signature || ''),
+          'Date      : ' + (data.signature_date || new Date().toLocaleDateString())
+        ].join('\n');
+
+        window.location.href = 'mailto:roseb@wcdac.com'
+          + '?subject=' + encodeURIComponent('Employment Application — Wadena County DAC')
+          + '&body='    + encodeURIComponent(body);
+
+        setTimeout(function () {
+          form.hidden = true;
+          succ.hidden = false;
+          msg.textContent = 'Your email client should have opened with your application pre-filled. '
+            + 'Please review and click Send to complete your submission. '
+            + 'If it didn\'t open, email your application directly to roseb@wcdac.com.';
+        }, 700);
+      }
+    });
+  }());
+  </script>
+  <script src="app.js"></script>
+</body>
+</html>

@@ -1,0 +1,42 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 800" role="img" aria-labelledby="title desc">
+  <title id="title">Community members working at a store</title>
+  <desc id="desc">An illustration of adults with disabilities participating in store work and customer service.</desc>
+  <defs>
+    <linearGradient id="sky" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#f59e0b"/>
+      <stop offset="100%" stop-color="#7c3aed"/>
+    </linearGradient>
+    <linearGradient id="store" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#ffffff"/>
+      <stop offset="100%" stop-color="#e2e8f0"/>
+    </linearGradient>
+  </defs>
+
+  <rect width="1200" height="800" fill="url(#sky)"/>
+  <rect x="0" y="520" width="1200" height="280" fill="#1e293b" opacity="0.5"/>
+
+  <rect x="140" y="180" width="920" height="440" rx="22" fill="url(#store)" opacity="0.92"/>
+  <rect x="190" y="240" width="320" height="330" rx="14" fill="#cbd5e1"/>
+  <rect x="220" y="270" width="260" height="42" rx="8" fill="#94a3b8"/>
+  <rect x="220" y="328" width="260" height="42" rx="8" fill="#94a3b8"/>
+  <rect x="220" y="386" width="260" height="42" rx="8" fill="#94a3b8"/>
+
+  <rect x="560" y="260" width="430" height="120" rx="14" fill="#334155"/>
+  <rect x="590" y="300" width="160" height="44" rx="8" fill="#0ea5e9"/>
+  <rect x="770" y="300" width="180" height="44" rx="8" fill="#f97316"/>
+
+  <circle cx="680" cy="470" r="38" fill="#f8fafc"/>
+  <rect x="648" y="510" width="64" height="84" rx="20" fill="#0f172a"/>
+  <circle cx="648" cy="566" r="36" fill="#475569"/>
+  <circle cx="744" cy="566" r="36" fill="#475569"/>
+  <rect x="690" y="544" width="44" height="10" rx="5" fill="#475569"/>
+
+  <circle cx="400" cy="470" r="32" fill="#f8fafc"/>
+  <rect x="370" y="502" width="60" height="88" rx="18" fill="#1d4ed8"/>
+  <rect x="430" y="528" width="70" height="14" rx="7" fill="#1d4ed8"/>
+
+  <rect x="880" y="408" width="56" height="170" rx="16" fill="#059669"/>
+  <circle cx="908" cy="380" r="30" fill="#f8fafc"/>
+
+  <text x="600" y="226" text-anchor="middle" font-family="Segoe UI, Tahoma, sans-serif" font-size="46" font-weight="800" fill="#0f172a">COMMUNITY STORE WORK</text>
+</svg>

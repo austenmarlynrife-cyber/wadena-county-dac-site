@@ -1,0 +1,233 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Volunteer • Wadena County DAC</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <a class="skip-link" href="#main">Skip to main content</a>
+
+  <header class="site-header">
+    <div class="wrap header-inner">
+      <a class="brand" href="index.html" aria-label="Wadena County DAC home">
+        <img class="brand-logo" src="images/wcdac-logo.svg" alt="Wadena County DAC logo" />
+      </a>
+
+      <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="primary-nav">
+        <span class="sr-only">Menu</span>
+        <span class="hamburger" aria-hidden="true"></span>
+      </button>
+
+      <nav id="primary-nav" class="primary-nav" aria-label="Primary navigation">
+        <div class="links">
+          <details class="dd">
+            <summary>About</summary>
+            <div class="dd-menu">
+              <a href="index.html#mission">Mission</a>
+              <a href="index.html#staff">Staff</a>
+              <a href="index.html#contact">Contact</a>
+            </div>
+          </details>
+          <details class="dd">
+            <summary>Programs</summary>
+            <div class="dd-menu">
+              <a href="index.html#programs">Services &amp; Activities</a>
+              <a href="index.html#eligibility">Eligibility / Referrals</a>
+              <a href="index.html#transportation">Transportation</a>
+            </div>
+          </details>
+          <a href="events.html">Events</a>
+          <a href="announcements.html">Updates</a>
+          <details class="dd">
+            <summary>Support</summary>
+            <div class="dd-menu">
+              <a href="https://www.givemn.org/organization/wadena-county-developmental-achievement-center" target="_blank" rel="noopener">Donate</a>
+              <a href="volunteer.html">Volunteer</a>
+              <a href="apply.html">Apply Now</a>
+            </div>
+          </details>
+        </div>
+      </nav>
+
+      <a class="btn nav-cta" href="index.html">Home</a>
+    </div>
+  </header>
+
+  <main id="main">
+    <div class="wrap">
+      <div class="card pad hover form-page">
+        <div class="kicker"><span class="dot"></span> Get Involved</div>
+        <h1>Volunteer with Us</h1>
+        <p class="sub">Volunteers bring energy, skills, and heart to everything we do — from daily activities and community events to special projects. Fill out the short form below and we'll reach out to connect you with current needs.</p>
+
+        <hr class="sep" />
+
+        <!--
+          FORM EMAIL SETUP
+          ─────────────────────────────────────────────────────────
+          Right now, Submit opens your default email client as a fallback.
+          To have forms delivered silently to roseb@wcdac.com instead:
+            1. Go to https://formspree.io and create a free account.
+            2. Click "New Form" and set the notification email to roseb@wcdac.com.
+            3. Copy the Form ID shown (e.g. "xabcdefg").
+            4. In the <form> tag below, replace VOLUNTEER_FORM_ID with that ID.
+          ─────────────────────────────────────────────────────────
+        -->
+        <form id="volForm" action="https://formspree.io/f/VOLUNTEER_FORM_ID" method="POST">
+          <input type="hidden" name="_subject" value="New Volunteer Application — Wadena County DAC" />
+
+          <div class="form-section">
+            <h3>Contact Information</h3>
+            <div class="form-row">
+              <div class="form-group">
+                <label for="v-first">First Name <span class="req">*</span></label>
+                <input type="text" id="v-first" name="first_name" required autocomplete="given-name" />
+              </div>
+              <div class="form-group">
+                <label for="v-last">Last Name <span class="req">*</span></label>
+                <input type="text" id="v-last" name="last_name" required autocomplete="family-name" />
+              </div>
+            </div>
+            <div class="form-row">
+              <div class="form-group">
+                <label for="v-email">Email Address <span class="req">*</span></label>
+                <input type="email" id="v-email" name="email" required autocomplete="email" />
+              </div>
+              <div class="form-group">
+                <label for="v-phone">Phone Number</label>
+                <input type="tel" id="v-phone" name="phone" autocomplete="tel" />
+              </div>
+            </div>
+          </div>
+
+          <div class="form-section">
+            <h3>Areas of Interest</h3>
+            <div class="form-group">
+              <label>I'd like to help with <em class="form-note">(check all that apply)</em></label>
+              <div class="check-group">
+                <label><input type="checkbox" name="interests" value="Community Events" /> Community Events</label>
+                <label><input type="checkbox" name="interests" value="Daily Activity Support" /> Daily Activity Support</label>
+                <label><input type="checkbox" name="interests" value="Administrative Help" /> Administrative Help</label>
+                <label><input type="checkbox" name="interests" value="Transportation Assistance" /> Transportation Assistance</label>
+                <label><input type="checkbox" name="interests" value="Special Projects" /> Special Projects</label>
+                <label><input type="checkbox" name="interests" value="Other" /> Other</label>
+              </div>
+            </div>
+            <div class="form-group">
+              <label>Availability <em class="form-note">(check all that apply)</em></label>
+              <div class="check-group">
+                <label><input type="checkbox" name="availability" value="Weekday Mornings" /> Weekday Mornings</label>
+                <label><input type="checkbox" name="availability" value="Weekday Afternoons" /> Weekday Afternoons</label>
+                <label><input type="checkbox" name="availability" value="Weekends" /> Weekends</label>
+                <label><input type="checkbox" name="availability" value="As Needed / Flexible" /> As Needed / Flexible</label>
+              </div>
+            </div>
+          </div>
+
+          <div class="form-section">
+            <h3>About You</h3>
+            <div class="form-group">
+              <label for="v-msg">Why do you want to volunteer? Any relevant experience or skills? <span class="req">*</span></label>
+              <textarea id="v-msg" name="message" required rows="5"
+                placeholder="Share a bit about yourself and why you'd like to get involved…"
+                maxlength="1000"></textarea>
+            </div>
+          </div>
+
+          <div class="form-actions">
+            <button type="submit" class="btn primary">Submit Application</button>
+            <span class="form-note">We'll reach out soon to connect you with current opportunities.</span>
+          </div>
+        </form>
+
+        <div id="vol-success" class="form-success" hidden>
+          <div class="fs-title">Thank you for applying!</div>
+          <div class="fs-body" id="vol-success-msg">Your volunteer application has been received. We'll be in touch soon to discuss how you can make a difference. Thank you for supporting Wadena County DAC!</div>
+        </div>
+      </div>
+    </div>
+  </main>
+
+  <footer>
+    <div class="wrap">© <span id="year"></span> Wadena County DAC</div>
+  </footer>
+
+  <script>document.getElementById("year").textContent = new Date().getFullYear();</script>
+  <script>
+  (function () {
+    var form = document.getElementById('volForm');
+    var succ = document.getElementById('vol-success');
+    var msg  = document.getElementById('vol-success-msg');
+    if (!form) return;
+
+    form.addEventListener('submit', function (e) {
+      e.preventDefault();
+
+      var isConfigured = form.action.indexOf('VOLUNTEER_FORM_ID') === -1;
+
+      if (isConfigured) {
+        /* ── Formspree AJAX submission ── */
+        var btn = form.querySelector('[type=submit]');
+        btn.disabled = true;
+        btn.textContent = 'Sending…';
+        fetch(form.action, {
+          method: 'POST',
+          body: new FormData(form),
+          headers: { 'Accept': 'application/json' }
+        }).then(function (resp) {
+          if (resp.ok) {
+            form.hidden = true;
+            succ.hidden = false;
+          } else {
+            btn.disabled = false;
+            btn.textContent = 'Submit Application';
+            alert('Submission failed. Please try again or email us at roseb@wcdac.com.');
+          }
+        }).catch(function () {
+          btn.disabled = false;
+          btn.textContent = 'Submit Application';
+          alert('Network error. Please email us directly at roseb@wcdac.com.');
+        });
+
+      } else {
+        /* ── mailto: fallback (Formspree not yet configured) ── */
+        var fd   = new FormData(form);
+        var data = {};
+        fd.forEach(function (v, k) {
+          if (k.startsWith('_')) return;
+          data[k] = data[k] ? data[k] + ', ' + v : v;
+        });
+        var body = [
+          'VOLUNTEER APPLICATION — WADENA COUNTY DAC',
+          '==========================================',
+          'Name        : ' + (data.first_name || '') + ' ' + (data.last_name || ''),
+          'Email       : ' + (data.email || ''),
+          'Phone       : ' + (data.phone || '(not provided)'),
+          '',
+          'Interests   : ' + (data.interests || 'None selected'),
+          'Availability: ' + (data.availability || 'None selected'),
+          '',
+          'Message:',
+          data.message || ''
+        ].join('\n');
+
+        window.location.href = 'mailto:roseb@wcdac.com'
+          + '?subject=' + encodeURIComponent('Volunteer Application — Wadena County DAC')
+          + '&body='    + encodeURIComponent(body);
+
+        setTimeout(function () {
+          form.hidden = true;
+          succ.hidden = false;
+          msg.textContent = 'Your email client should have opened with your application pre-filled. '
+            + 'Please review and click Send to complete your submission. '
+            + 'If it didn\'t open, email us directly at roseb@wcdac.com.';
+        }, 700);
+      }
+    });
+  }());
+  </script>
+  <script src="app.js"></script>
+</body>
+</html>

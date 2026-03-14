@@ -1,0 +1,80 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Announcements • Wadena County DAC</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <a class="skip-link" href="#main">Skip to main content</a>
+
+  <header class="site-header">
+    <div class="wrap header-inner">
+      <a class="brand" href="index.html" aria-label="Wadena County DAC home">
+        <img class="brand-logo" src="images/wcdac-logo.svg" alt="Wadena County DAC logo" />
+      </a>
+
+      <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="primary-nav">
+        <span class="sr-only">Menu</span>
+        <span class="hamburger" aria-hidden="true"></span>
+      </button>
+
+      <nav id="primary-nav" class="primary-nav" aria-label="Primary navigation">
+        <div class="links">
+  <details class="dd">
+    <summary>About</summary>
+    <div class="dd-menu">
+      <a href="index.html#mission">Mission</a>
+      <a href="index.html#staff">Staff</a>
+      <a href="index.html#contact">Contact</a>
+    </div>
+  </details>
+
+  <details class="dd">
+    <summary>Programs</summary>
+    <div class="dd-menu">
+      <a href="index.html#programs">Services & Activities</a>
+      <a href="index.html#eligibility">Eligibility / Referrals</a>
+      <a href="index.html#transportation">Transportation</a>
+    </div>
+  </details>
+
+  <a href="events.html">Events</a>
+  <a href="announcements.html">Updates</a>
+
+  <details class="dd">
+    <summary>Support</summary>
+    <div class="dd-menu">
+      <a href="https://www.givemn.org/organization/wadena-county-developmental-achievement-center" target="_blank" rel="noopener">Donate</a>
+      <a href="volunteer.html">Volunteer</a>
+      <a href="apply.html">Apply Now</a>
+    </div>
+  </details>
+</div>
+      </nav>
+
+      <a class="btn nav-cta" href="index.html">Home</a>
+    </div>
+  </header>
+
+  <main id="main">
+    <div class="wrap">
+      <div class="card pad hover">
+        <div class="kicker"><span class="dot"></span> Updates</div>
+        <h1>Announcements</h1>
+        <p class="sub">Quick updates, reminders, and news.</p>
+        <hr class="sep" />
+        <div id="annList" class="list"></div>
+      </div>
+    </div>
+  </main>
+
+  <footer>
+    <div class="wrap">© <span id="year"></span> Wadena County DAC</div>
+  </footer>
+
+  <script>document.getElementById("year").textContent = new Date().getFullYear();</script>
+  <script src="app.js"></script>
+</body>
+</html>

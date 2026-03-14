@@ -1,0 +1,38 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1920 1080" preserveAspectRatio="xMidYMid slice">
+  <defs>
+    <linearGradient id="sky" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#f59e0b"/>
+      <stop offset="35%" stop-color="#fb7185"/>
+      <stop offset="68%" stop-color="#7c3aed"/>
+      <stop offset="100%" stop-color="#1e3a8a"/>
+    </linearGradient>
+    <radialGradient id="sunWash" cx="50%" cy="30%" r="30%">
+      <stop offset="0%" stop-color="#fde68a" stop-opacity="0.9"/>
+      <stop offset="70%" stop-color="#fb923c" stop-opacity="0.35"/>
+      <stop offset="100%" stop-color="#fb923c" stop-opacity="0"/>
+    </radialGradient>
+    <filter id="softBlur" x="-30%" y="-30%" width="160%" height="160%">
+      <feGaussianBlur stdDeviation="24"/>
+    </filter>
+  </defs>
+
+  <rect width="1920" height="1080" fill="url(#sky)"/>
+  <circle cx="960" cy="330" r="260" fill="url(#sunWash)"/>
+
+  <g filter="url(#softBlur)" opacity="0.55">
+    <ellipse cx="460" cy="250" rx="360" ry="120" fill="#fca5a5"/>
+    <ellipse cx="1440" cy="260" rx="420" ry="130" fill="#fdba74"/>
+    <ellipse cx="980" cy="390" rx="520" ry="180" fill="#fcd34d"/>
+  </g>
+
+  <path d="M0 760 C220 640, 420 700, 620 760 C840 830, 1120 860, 1320 780 C1490 710, 1690 660, 1920 740 L1920 1080 L0 1080 Z" fill="#7f1d1d" opacity="0.6"/>
+  <path d="M0 810 C180 690, 380 760, 560 820 C740 880, 980 900, 1200 820 C1420 740, 1660 700, 1920 790 L1920 1080 L0 1080 Z" fill="#9a3412" opacity="0.7"/>
+  <path d="M0 860 C230 770, 500 810, 730 900 C960 980, 1230 970, 1470 900 C1640 850, 1770 820, 1920 860 L1920 1080 L0 1080 Z" fill="#451a03" opacity="0.78"/>
+  <path d="M0 900 C220 860, 420 900, 640 960 C840 1010, 1120 1010, 1320 960 C1540 910, 1740 890, 1920 920 L1920 1080 L0 1080 Z" fill="#0f172a" opacity="0.92"/>
+
+  <g opacity="0.25" fill="#fef3c7" filter="url(#softBlur)">
+    <path d="M250 760 l50 -90 l30 52 l26 -36 l34 74 z"/>
+    <path d="M1520 740 l56 -100 l32 60 l40 -46 l38 86 z"/>
+    <path d="M1080 780 l40 -68 l26 38 l24 -30 l32 60 z"/>
+  </g>
+</svg>
