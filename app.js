@@ -22,8 +22,9 @@ function escapeHtml(str){
     .replaceAll("'","&#039;");
 }
 
-// Set this once and all Facebook photo links on the site will use it.
-const FACEBOOK_PHOTOS_URL = "https://www.facebook.com/WadenacoDAC/photos/";
+// Set this once and all Facebook embeds/links on the site will use it.
+const FACEBOOK_PAGE_URL = "https://www.facebook.com/WadenacoDAC";
+const FACEBOOK_PHOTOS_URL = `${FACEBOOK_PAGE_URL}/photos/`;
 
 function initFacebookPhotoLinks(){
   const links = Array.from(document.querySelectorAll("[data-facebook-photos-link]"));
@@ -49,6 +50,27 @@ function initFacebookPhotoLinks(){
     link.removeAttribute("aria-disabled");
   });
   if(status) status.textContent = "Opens your Facebook photos in a new tab.";
+}
+
+function initFacebookPageEmbeds(){
+  const embeds = Array.from(document.querySelectorAll("[data-facebook-page-embed]"));
+  const links = Array.from(document.querySelectorAll("[data-facebook-page-link]"));
+  if(!embeds.length && !links.length) return;
+
+  const pageUrl = (FACEBOOK_PAGE_URL || "").trim();
+  if(!pageUrl) return;
+
+  links.forEach((link) => {
+    link.setAttribute("href", pageUrl);
+    link.setAttribute("target", "_blank");
+    link.setAttribute("rel", "noopener noreferrer");
+  });
+
+  embeds.forEach((embed) => {
+    const height = embed.dataset.height || "620";
+    const tabs = embed.dataset.tabs || "timeline";
+    embed.src = `https://www.facebook.com/plugins/page.php?href=${encodeURIComponent(pageUrl)}&tabs=${encodeURIComponent(tabs)}&width=500&height=${encodeURIComponent(height)}&small_header=false&adapt_container_width=true&hide_cover=false&show_facepile=true`;
+  });
 }
 
 function initNavToggle(){
@@ -365,6 +387,7 @@ document.addEventListener("DOMContentLoaded", async () => {
   initNavToggle();
   initClickSound();
   initFacebookPhotoLinks();
+  initFacebookPageEmbeds();
   initRevealOnScroll();
   initHeaderMiniPromo();
   try{

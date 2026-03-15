@@ -473,6 +473,29 @@ h2{margin:0 0 10px; font-size:22px; color:#0a1930}
 }
 .price-list li{margin:2px 0;}
 
+.facebook-feed-grid{
+  display:grid;
+  grid-template-columns:minmax(0, 1.15fr) minmax(260px, .85fr);
+  gap:14px;
+  margin-top:14px;
+  align-items:start;
+}
+.facebook-frame-wrap{
+  border-radius:18px;
+  overflow:hidden;
+  border:1px solid var(--border);
+  background: rgba(255,255,255,.34);
+  box-shadow: 0 14px 30px rgba(15,23,42,.08);
+  min-height:620px;
+}
+.facebook-frame-wrap iframe{
+  display:block;
+  width:100%;
+  min-height:620px;
+  border:0;
+  background:#fff;
+}
+
 hr.sep{border:none; border-top:1px solid var(--border); margin:14px 0}
 
 footer{border-top:1px solid var(--border); padding:22px 0; color: var(--muted); font-size:13px;}
@@ -516,6 +539,9 @@ footer{border-top:1px solid var(--border); padding:22px 0; color: var(--muted); 
   .gallery-card img{height:240px;}
   .product-grid{grid-template-columns:1fr;}
   .product-media{height:230px;}
+  .facebook-feed-grid{grid-template-columns:1fr;}
+  .facebook-frame-wrap,
+  .facebook-frame-wrap iframe{min-height:540px;}
   .grid{grid-template-columns: 1fr}
   .grid3{grid-template-columns: 1fr}
   .calendar{gap:8px}
