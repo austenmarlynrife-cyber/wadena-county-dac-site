@@ -184,6 +184,45 @@ function initHeaderMiniPromo(){
   observer.observe(hero);
 }
 
+function initParallaxBackground(){
+  if(document.querySelector(".parallax-scene")) return;
+
+  const scene = document.createElement("div");
+  scene.className = "parallax-scene";
+  scene.setAttribute("aria-hidden", "true");
+  scene.innerHTML = [
+    '<div class="parallax-layer parallax-layer--sky"></div>',
+    '<div class="parallax-layer parallax-layer--mid"></div>',
+    '<div class="parallax-layer parallax-layer--front"></div>'
+  ].join("");
+
+  document.body.prepend(scene);
+
+  if(window.matchMedia && window.matchMedia("(prefers-reduced-motion: reduce)").matches){
+    return;
+  }
+
+  let ticking = false;
+
+  const update = () => {
+    const scrollY = window.scrollY || window.pageYOffset || 0;
+    scene.style.setProperty("--parallax-sky-y", `${scrollY * -0.08}px`);
+    scene.style.setProperty("--parallax-mid-y", `${scrollY * -0.22}px`);
+    scene.style.setProperty("--parallax-front-y", `${scrollY * -0.4}px`);
+    ticking = false;
+  };
+
+  const requestUpdate = () => {
+    if(ticking) return;
+    ticking = true;
+    window.requestAnimationFrame(update);
+  };
+
+  update();
+  window.addEventListener("scroll", requestUpdate, { passive: true });
+  window.addEventListener("resize", requestUpdate);
+}
+
 /* Home */
 async function renderHome(){
   const annEl = document.getElementById("homeAnnouncements");
@@ -384,6 +423,7 @@ async function renderEventsCalendar(){
 }
 
 document.addEventListener("DOMContentLoaded", async () => {
+  initParallaxBackground();
   initNavToggle();
   initClickSound();
   initFacebookPhotoLinks();

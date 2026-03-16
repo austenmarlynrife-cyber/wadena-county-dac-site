@@ -25,13 +25,7 @@ body{
   font-family:var(--font);
   color:var(--text);
   line-height:1.6;
-  background:
-    url("images/watercolor-bg.svg"),
-    linear-gradient(180deg, #edf8f8, var(--bg));
-  background-attachment: fixed;
-  background-size: cover;
-  background-position: center;
-  background-repeat: no-repeat;
+  background: linear-gradient(180deg, #edf8f8, var(--bg));
   min-height: 100vh;
 }
 
@@ -39,13 +33,55 @@ body::before{
   content: "";
   position: fixed;
   inset: 0;
-  background: radial-gradient(circle at 25% 25%, rgba(14, 116, 144, .22), transparent 55%),
-              radial-gradient(circle at 75% 20%, rgba(15, 118, 110, .18), transparent 60%),
-              radial-gradient(circle at 50% 65%, rgba(37, 99, 235, .14), transparent 55%);
-  opacity: 0.5;
+  background: radial-gradient(circle at 25% 25%, rgba(14, 116, 144, .16), transparent 55%),
+              radial-gradient(circle at 75% 20%, rgba(15, 118, 110, .12), transparent 60%),
+              radial-gradient(circle at 50% 65%, rgba(37, 99, 235, .10), transparent 55%);
+  opacity: 0.62;
   pointer-events: none;
-  z-index: -1;
+  z-index: -2;
   mix-blend-mode: multiply;
+}
+
+.parallax-scene{
+  position: fixed;
+  inset: 0;
+  z-index: -3;
+  overflow: hidden;
+  pointer-events: none;
+  background: linear-gradient(180deg, #def2f5 0%, #c7e4e1 45%, #a7ccc5 100%);
+}
+
+.parallax-scene::after{
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(180deg, rgba(255,255,255,.04), rgba(15,23,42,.06) 75%, rgba(15,23,42,.16));
+}
+
+.parallax-layer{
+  position: absolute;
+  inset: -8% -6%;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  will-change: transform;
+}
+
+.parallax-layer--sky{
+  background-image: url("images/parallax-sky.svg");
+  transform: translate3d(0, var(--parallax-sky-y, 0px), 0) scale(1.08);
+}
+
+.parallax-layer--mid{
+  background-image: url("images/parallax-mid.svg");
+  background-position: center bottom;
+  transform: translate3d(0, var(--parallax-mid-y, 0px), 0) scale(1.1);
+}
+
+.parallax-layer--front{
+  background-image: url("images/parallax-front.svg");
+  background-position: center bottom;
+  transform: translate3d(0, var(--parallax-front-y, 0px), 0) scale(1.12);
 }
 
 a{color:inherit; text-decoration:none}
@@ -74,7 +110,7 @@ a{color:inherit; text-decoration:none}
   left:0;
   right:0;
   z-index:1000;
-  background: rgba(242,250,249,.96);
+  background: transparent;
   border-bottom:1px solid var(--border);
   box-shadow: 0 8px 22px rgba(15,23,42,.10);
   isolation: isolate;
@@ -85,6 +121,26 @@ a{color:inherit; text-decoration:none}
   transform: translateY(0);
 }
 
+.site-header::before{
+  content:"";
+  position:absolute;
+  inset:0;
+  background: url("images/wadena-county-banner.svg") center 24% / cover no-repeat;
+  opacity:.82;
+  filter: saturate(0.95) contrast(1.02) brightness(0.72) hue-rotate(-18deg);
+  z-index:0;
+}
+
+.site-header::after{
+  content:"";
+  position:absolute;
+  inset:0;
+  background:
+    linear-gradient(90deg, rgba(27,94,45,.86) 0%, rgba(38,112,56,.74) 34%, rgba(44,122,64,.8) 100%),
+    linear-gradient(180deg, rgba(255,255,255,.06), rgba(255,255,255,.02));
+  z-index:0;
+}
+
 .header-inner{
   display:flex;
   align-items:center;
@@ -92,6 +148,8 @@ a{color:inherit; text-decoration:none}
   gap:12px;
   padding:10px 0;
   overflow: visible;
+  position:relative;
+  z-index:1;
 }
 
 .brand{display:flex; align-items:center; color: var(--text); flex:0 0 auto; min-width:0;}
@@ -304,12 +362,10 @@ main{padding:40px 0 80px}
 .pad{padding:28px}
 
 .hero{
-  border-radius: var(--radius);
-  background: linear-gradient(135deg, rgba(255,255,255,.32), rgba(255,255,255,.18));
-  border: 1px solid rgba(15,23,42,.08);
+  min-height:auto;
 }
-.hero-layout{display:grid; grid-template-columns:minmax(0, 1.05fr) minmax(300px, .95fr); gap:22px; align-items:center;}
-.hero-copy{min-width:0;}
+.hero-layout{display:grid; grid-template-columns:minmax(0, 1.05fr) minmax(300px, .95fr); gap:22px; align-items:center; position:relative; z-index:1;}
+.hero-copy{min-width:0; position:relative; z-index:1;}
 .hero-logo{
   display:block;
   width:min(620px, 100%);
@@ -327,6 +383,8 @@ main{padding:40px 0 80px}
   border:1px solid rgba(15,23,42,.08);
   background: linear-gradient(180deg, rgba(255,255,255,.58), rgba(240,253,250,.32));
   box-shadow: 0 18px 40px rgba(15,23,42,.12);
+  position:relative;
+  z-index:1;
 }
 .hero-spotlight-badge{
   display:inline-flex;
@@ -534,6 +592,7 @@ footer{border-top:1px solid var(--border); padding:22px 0; color: var(--muted); 
 @media (max-width: 900px){
   .brand-logo{width:min(170px, 46vw);} 
   .hero-logo{width:min(540px, 100%);} 
+  .hero{min-height:auto; background-position:center 30%;}
   .hero-layout{grid-template-columns:1fr; gap:16px;}
   .gallery-grid{grid-template-columns:1fr;}
   .gallery-card img{height:240px;}
