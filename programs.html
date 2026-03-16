@@ -1,0 +1,138 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Programs & Services • Wadena County DAC</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <a class="skip-link" href="#main">Skip to main content</a>
+
+  <header class="site-header">
+    <div class="wrap header-inner">
+      <a class="brand" href="index.html" aria-label="Wadena County DAC home">
+        <img class="brand-logo" src="images/wcdac-logo.svg" alt="Wadena County DAC logo" />
+      </a>
+
+      <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="primary-nav">
+        <span class="sr-only">Menu</span>
+        <span class="hamburger" aria-hidden="true"></span>
+      </button>
+
+      <nav id="primary-nav" class="primary-nav" aria-label="Primary navigation">
+        <div class="links">
+          <details class="dd">
+            <summary>About</summary>
+            <div class="dd-menu">
+              <a href="index.html#mission">Mission</a>
+              <a href="index.html#staff">Staff</a>
+              <a href="index.html#contact">Contact</a>
+            </div>
+          </details>
+          <details class="dd">
+            <summary>Programs</summary>
+            <div class="dd-menu">
+              <a href="programs.html#services">Services &amp; Activities</a>
+              <a href="programs.html#eligibility">Eligibility / Referrals</a>
+              <a href="programs.html#transportation">Transportation</a>
+              <a href="custom-orders.html">Custom Products</a>
+            </div>
+          </details>
+          <a href="events.html">Events</a>
+          <a href="announcements.html">Updates</a>
+          <details class="dd">
+            <summary>Support</summary>
+            <div class="dd-menu">
+              <a href="https://www.givemn.org/organization/wadena-county-developmental-achievement-center" target="_blank" rel="noopener">Donate</a>
+              <a href="volunteer.html">Volunteer</a>
+              <a href="apply.html">Apply Now</a>
+            </div>
+          </details>
+        </div>
+      </nav>
+
+      <a class="btn nav-cta" href="index.html">Home</a>
+    </div>
+  </header>
+
+  <main id="main">
+    <div class="wrap">
+      <section class="card pad hover page-wide">
+        <div class="kicker"><span class="dot"></span> Programs & Referrals</div>
+        <h1>Programs & Services</h1>
+        <p class="sub">Wadena County DAC offers person-centered day training, habilitation, community participation, and supportive services designed to help adults build skills, confidence, and meaningful routines.</p>
+
+        <div class="button-group">
+          <a class="btn primary" href="intake.html">Start intake form</a>
+          <a class="btn" href="index.html#contact">Contact our team</a>
+        </div>
+
+        <hr class="sep" />
+
+        <div class="product-grid" aria-label="Programs and services details">
+          <article class="product-card" id="services">
+            <h3>Services &amp; Activities</h3>
+            <p class="sub">Our program blends structure, community engagement, and individualized support.</p>
+            <ul class="price-list">
+              <li>Daily activity planning that supports independence and routine</li>
+              <li>Life-skills practice, communication, and social connection</li>
+              <li>Community outings, volunteering, and inclusive participation</li>
+              <li>Creative activities such as crafts, music, games, and seasonal events</li>
+            </ul>
+          </article>
+
+          <article class="product-card" id="eligibility">
+            <h3>Eligibility / Referrals</h3>
+            <p class="sub">If you are not sure where to begin, we can help walk you through the process.</p>
+            <ul class="price-list">
+              <li>Referrals may come from families, guardians, case managers, or county staff</li>
+              <li>We can help review current supports and discuss program fit</li>
+              <li>Our intake form helps us understand needs, goals, and contact information</li>
+              <li>We follow up directly to discuss next steps, scheduling, and documentation</li>
+            </ul>
+          </article>
+
+          <article class="product-card" id="transportation">
+            <h3>Transportation</h3>
+            <p class="sub">Transportation options vary based on need, location, and available supports.</p>
+            <ul class="price-list">
+              <li>We can discuss what transportation options may be available</li>
+              <li>Families and case managers can include transportation needs on the intake form</li>
+              <li>We will help identify practical next steps and local coordination options</li>
+            </ul>
+          </article>
+
+          <article class="product-card">
+            <h3>What to Expect</h3>
+            <p class="sub">After you submit an intake, our director or staff team will review it and reach out.</p>
+            <ul class="price-list">
+              <li>Review of participant needs, goals, and support information</li>
+              <li>Follow-up call or email from the DAC team</li>
+              <li>Discussion of program fit, schedule, and services</li>
+              <li>Guidance on next paperwork or planning steps</li>
+            </ul>
+          </article>
+        </div>
+
+        <hr class="sep" />
+
+        <div class="item">
+          <div class="title">Ready to get started?</div>
+          <div class="body">Complete the intake form and it will be sent to our director at roseb@wcdac.com for review.</div>
+          <div class="button-group">
+            <a class="btn primary" href="intake.html">Open intake form</a>
+          </div>
+        </div>
+      </section>
+    </div>
+  </main>
+
+  <footer>
+    <div class="wrap">© <span id="year"></span> Wadena County DAC</div>
+  </footer>
+
+  <script>document.getElementById("year").textContent = new Date().getFullYear();</script>
+  <script src="app.js"></script>
+</body>
+</html>
