@@ -1,0 +1,84 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1600 900" preserveAspectRatio="xMidYMid slice" role="img" aria-label="Banner inspired by Wadena County communities including Menahga, Sebeka, Wadena, and Verndale">
+  <defs>
+    <linearGradient id="sky" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#d8f3f8"/>
+      <stop offset="35%" stop-color="#9ed7d9"/>
+      <stop offset="68%" stop-color="#6ea4b8"/>
+      <stop offset="100%" stop-color="#1f4c68"/>
+    </linearGradient>
+    <linearGradient id="water" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#60c7dd"/>
+      <stop offset="100%" stop-color="#245979"/>
+    </linearGradient>
+    <linearGradient id="field" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#7dd3a7"/>
+      <stop offset="100%" stop-color="#2f7b53"/>
+    </linearGradient>
+    <filter id="blur" x="-30%" y="-30%" width="160%" height="160%">
+      <feGaussianBlur stdDeviation="18"/>
+    </filter>
+  </defs>
+
+  <rect width="1600" height="900" fill="url(#sky)"/>
+  <circle cx="420" cy="170" r="120" fill="#f1f5b5" opacity="0.45"/>
+  <circle cx="1210" cy="150" r="150" fill="#dcfce7" opacity="0.3"/>
+
+  <g filter="url(#blur)" opacity="0.42">
+    <ellipse cx="250" cy="220" rx="260" ry="90" fill="#d1fae5"/>
+    <ellipse cx="870" cy="250" rx="420" ry="130" fill="#bfdbfe"/>
+    <ellipse cx="1370" cy="220" rx="260" ry="88" fill="#a7f3d0"/>
+  </g>
+
+  <path d="M0 560 C110 498, 206 490, 314 522 C416 552, 502 560, 622 524 C742 488, 844 486, 954 526 C1080 572, 1204 568, 1326 520 C1428 480, 1512 482, 1600 516 L1600 900 L0 900 Z" fill="#1f5a50" opacity="0.42"/>
+  <path d="M0 610 C132 560, 244 558, 344 586 C458 620, 572 622, 690 582 C804 544, 934 548, 1038 590 C1166 642, 1300 642, 1414 600 C1498 570, 1560 568, 1600 576 L1600 900 L0 900 Z" fill="#124b61" opacity="0.44"/>
+
+  <g>
+    <path d="M0 640 C124 620, 228 650, 344 694 C460 738, 590 744, 714 706 C820 674, 932 670, 1042 702 C1174 740, 1290 742, 1412 706 C1496 682, 1562 678, 1600 684 L1600 900 L0 900 Z" fill="url(#water)" opacity="0.42"/>
+    <path d="M0 710 C102 674, 200 676, 306 714 C428 756, 560 766, 688 736 C794 712, 900 710, 1010 740 C1126 774, 1272 782, 1392 748 C1486 722, 1552 714, 1600 720 L1600 900 L0 900 Z" fill="url(#field)" opacity="0.36"/>
+  </g>
+
+  <g fill="#184e39" opacity="0.96">
+    <path d="M84 650 l26 -46 l15 26 l-9 -2 l24 34 h-21 l8 32 h-29 l9 -32 h-21 l24 -34 l-9 2 z"/>
+    <path d="M140 662 l34 -62 l20 34 l-11 -2 l31 44 h-28 l10 40 h-38 l10 -40 h-28 l31 -44 l-11 2 z"/>
+    <path d="M214 666 l28 -50 l16 28 l-9 -1 l25 36 h-23 l8 34 h-31 l8 -34 h-23 l25 -36 l-9 1 z"/>
+    <path d="M1280 656 l30 -54 l18 30 l-10 -2 l27 39 h-25 l9 35 h-34 l9 -35 h-25 l27 -39 l-10 2 z"/>
+    <path d="M1352 668 l24 -42 l14 24 l-8 -2 l21 30 h-20 l7 28 h-27 l7 -28 h-20 l21 -30 l-8 2 z"/>
+    <path d="M1410 660 l32 -58 l18 32 l-10 -2 l29 42 h-26 l10 37 h-35 l10 -37 h-26 l29 -42 l-10 2 z"/>
+  </g>
+
+  <g transform="translate(318 530)" opacity="0.92">
+    <rect x="0" y="80" width="188" height="96" rx="10" fill="#dff3f7"/>
+    <polygon points="-8,88 94,24 196,88" fill="#2f6f8a"/>
+    <rect x="78" y="118" width="36" height="58" fill="#2f6f8a"/>
+    <rect x="22" y="112" width="34" height="28" fill="#9fd0df"/>
+    <rect x="132" y="112" width="34" height="28" fill="#9fd0df"/>
+    <rect x="18" y="176" width="220" height="14" rx="7" fill="#25526a" opacity="0.55"/>
+  </g>
+
+  <g transform="translate(636 500)" opacity="0.94">
+    <rect x="0" y="126" width="250" height="64" fill="#d7f0d5"/>
+    <rect x="166" y="26" width="26" height="100" fill="#d7f0d5"/>
+    <rect x="146" y="14" width="66" height="20" rx="10" fill="#b5d8b1"/>
+    <ellipse cx="178" cy="24" rx="32" ry="14" fill="#cde8ca"/>
+    <path d="M0 126 C40 90, 84 92, 118 126 Z" fill="#5d8d54"/>
+    <path d="M74 126 C114 78, 164 80, 214 126 Z" fill="#4f7c47"/>
+    <path d="M120 126 C166 86, 214 88, 250 126 Z" fill="#679a5d"/>
+    <path d="M-30 188 H286" stroke="#25526a" stroke-width="12" stroke-linecap="round" opacity="0.34"/>
+  </g>
+
+  <g transform="translate(998 470)" opacity="0.94">
+    <rect x="0" y="94" width="246" height="88" rx="10" fill="#ecf8fb"/>
+    <rect x="24" y="116" width="54" height="66" fill="#a7d8e5"/>
+    <rect x="92" y="108" width="62" height="74" fill="#95c7d7"/>
+    <rect x="170" y="102" width="52" height="80" fill="#83b8ca"/>
+    <rect x="46" y="58" width="16" height="58" fill="#32637f"/>
+    <circle cx="54" cy="56" r="18" fill="#dff6fb" stroke="#32637f" stroke-width="5"/>
+    <path d="M-18 182 H266" stroke="#1f4c68" stroke-width="14" stroke-linecap="round" opacity="0.32"/>
+  </g>
+
+  <g transform="translate(1226 522)" opacity="0.94">
+    <path d="M0 130 C40 106, 90 108, 126 130 C164 154, 220 158, 268 136 L268 202 L0 202 Z" fill="#b7dfb7"/>
+    <path d="M44 120 l40 -24 l56 34 l40 -24 l58 30" fill="none" stroke="#2f7b53" stroke-width="8" stroke-linecap="round" stroke-linejoin="round"/>
+    <path d="M18 180 H250" stroke="#31576e" stroke-width="10" stroke-linecap="round" opacity="0.35"/>
+  </g>
+</svg>
