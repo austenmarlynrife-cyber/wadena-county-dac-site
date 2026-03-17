@@ -1,35 +1,16 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 800" role="img" aria-labelledby="title desc">
-  <title id="title">Community neighborhood activity</title>
-  <desc id="desc">An illustration of inclusive neighborhood volunteering and community engagement.</desc>
-  <defs>
-    <linearGradient id="day" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0%" stop-color="#22d3ee"/>
-      <stop offset="100%" stop-color="#1d4ed8"/>
-    </linearGradient>
-  </defs>
-
-  <rect width="1200" height="800" fill="url(#day)"/>
-  <rect x="0" y="500" width="1200" height="300" fill="#14532d" opacity="0.55"/>
-
-  <rect x="140" y="170" width="920" height="420" rx="24" fill="#ffffff" opacity="0.88"/>
-
-  <rect x="220" y="280" width="220" height="220" rx="14" fill="#f59e0b"/>
-  <polygon points="200,300 330,210 460,300" fill="#7c2d12"/>
-  <rect x="305" y="385" width="54" height="115" rx="8" fill="#7c2d12"/>
-
-  <rect x="760" y="285" width="220" height="215" rx="14" fill="#fb7185"/>
-  <polygon points="740,305 870,220 1000,305" fill="#831843"/>
-  <rect x="850" y="390" width="52" height="110" rx="8" fill="#831843"/>
-
-  <circle cx="535" cy="425" r="32" fill="#f8fafc"/>
-  <rect x="505" y="460" width="62" height="88" rx="20" fill="#0284c7"/>
-  <circle cx="502" cy="557" r="34" fill="#475569"/>
-  <circle cx="594" cy="557" r="34" fill="#475569"/>
-  <rect x="546" y="536" width="40" height="11" rx="5" fill="#475569"/>
-
-  <circle cx="675" cy="430" r="31" fill="#f8fafc"/>
-  <rect x="646" y="463" width="58" height="84" rx="18" fill="#16a34a"/>
-  <rect x="703" y="490" width="72" height="13" rx="6" fill="#16a34a"/>
-
-  <text x="600" y="245" text-anchor="middle" font-family="Segoe UI, Tahoma, sans-serif" font-size="46" font-weight="800" fill="#0f172a">COMMUNITY IN ACTION</text>
+﻿<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 520" role="img" aria-labelledby="t d">
+  <title id="t">Neighborhood engagement scene</title>
+  <desc id="d">Illustrated neighborhood and volunteer scene.</desc>
+  <rect width="800" height="520" fill="#f4ecdf"/>
+  <rect y="320" width="800" height="200" fill="#d0e0cf"/>
+  <rect x="90" y="210" width="180" height="140" fill="#fff9ef" stroke="#b69b74" stroke-width="4"/>
+  <polygon points="90,210 180,150 270,210" fill="#6d816a"/>
+  <rect x="315" y="180" width="210" height="170" fill="#fff9ef" stroke="#b69b74" stroke-width="4"/>
+  <polygon points="315,180 420,120 525,180" fill="#5f735c"/>
+  <rect x="560" y="225" width="150" height="125" fill="#fff9ef" stroke="#b69b74" stroke-width="4"/>
+  <polygon points="560,225 635,175 710,225" fill="#637a60"/>
+  <circle cx="260" cy="310" r="34" fill="#d6ad64"/>
+  <circle cx="420" cy="300" r="34" fill="#d6ad64"/>
+  <circle cx="560" cy="308" r="34" fill="#d6ad64"/>
+  <text x="400" y="470" text-anchor="middle" font-size="40" fill="#355037" font-family="Georgia" font-weight="700">Neighborhood Engagement</text>
 </svg>

@@ -1,4 +1,4 @@
-function fmtDate(d){
+﻿function fmtDate(d){
   const y = d.getFullYear();
   const m = String(d.getMonth()+1).padStart(2,"0");
   const day = String(d.getDate()).padStart(2,"0");
@@ -31,24 +31,27 @@ function initFacebookPhotoLinks(){
   if(!links.length) return;
 
   const status = document.getElementById("fbPhotosStatus");
-  const url = (FACEBOOK_PHOTOS_URL || "").trim();
+  const fallbackUrl = (FACEBOOK_PHOTOS_URL || "").trim();
 
-  if(!url){
-    links.forEach(link => {
+  links.forEach(link => {
+    const url = (link.dataset.facebookPhotosUrl || fallbackUrl || "").trim();
+    if(!url){
       link.setAttribute("href", "#");
       link.setAttribute("aria-disabled", "true");
       link.addEventListener("click", (event) => event.preventDefault());
-    });
-    if(status) status.textContent = "Set FACEBOOK_PHOTOS_URL in app.js to connect your live Facebook photos.";
-    return;
-  }
+      return;
+    }
 
-  links.forEach(link => {
     link.setAttribute("href", url);
     link.setAttribute("target", "_blank");
     link.setAttribute("rel", "noopener noreferrer");
     link.removeAttribute("aria-disabled");
   });
+
+  if(!fallbackUrl && status) {
+    status.textContent = "Set FACEBOOK_PHOTOS_URL in app.js to connect your live Facebook photos.";
+    return;
+  }
   if(status) status.textContent = "Opens your Facebook photos in a new tab.";
 }
 
@@ -57,16 +60,17 @@ function initFacebookPageEmbeds(){
   const links = Array.from(document.querySelectorAll("[data-facebook-page-link]"));
   if(!embeds.length && !links.length) return;
 
-  const pageUrl = (FACEBOOK_PAGE_URL || "").trim();
-  if(!pageUrl) return;
-
   links.forEach((link) => {
+    const pageUrl = (link.dataset.facebookPageUrl || FACEBOOK_PAGE_URL || "").trim();
+    if(!pageUrl) return;
     link.setAttribute("href", pageUrl);
     link.setAttribute("target", "_blank");
     link.setAttribute("rel", "noopener noreferrer");
   });
 
   embeds.forEach((embed) => {
+    const pageUrl = (embed.dataset.facebookPageUrl || FACEBOOK_PAGE_URL || "").trim();
+    if(!pageUrl) return;
     const height = embed.dataset.height || "620";
     const tabs = embed.dataset.tabs || "timeline";
     embed.src = `https://www.facebook.com/plugins/page.php?href=${encodeURIComponent(pageUrl)}&tabs=${encodeURIComponent(tabs)}&width=500&height=${encodeURIComponent(height)}&small_header=false&adapt_container_width=true&hide_cover=false&show_facepile=true`;
@@ -101,40 +105,6 @@ function initNavToggle(){
   });
 }
 
-function initClickSound(){
-  let audioCtx = null;
-
-  const playClick = () => {
-    const AudioCtx = window.AudioContext || window.webkitAudioContext;
-    if(!AudioCtx) return;
-    if(!audioCtx) audioCtx = new AudioCtx();
-    if(audioCtx.state === "suspended") audioCtx.resume();
-
-    const now = audioCtx.currentTime;
-    const osc = audioCtx.createOscillator();
-    const gain = audioCtx.createGain();
-
-    osc.type = "square";
-    osc.frequency.setValueAtTime(1300, now);
-    osc.frequency.exponentialRampToValueAtTime(700, now + 0.025);
-
-    gain.gain.setValueAtTime(0.0001, now);
-    gain.gain.exponentialRampToValueAtTime(0.045, now + 0.004);
-    gain.gain.exponentialRampToValueAtTime(0.0001, now + 0.035);
-
-    osc.connect(gain);
-    gain.connect(audioCtx.destination);
-    osc.start(now);
-    osc.stop(now + 0.04);
-  };
-
-  document.addEventListener("pointerdown", (event) => {
-    const target = event.target.closest("a, button, summary, .cell, .item-link");
-    if(!target) return;
-    playClick();
-  }, { passive: true });
-}
-
 function initRevealOnScroll(){
   if(window.matchMedia && window.matchMedia("(prefers-reduced-motion: reduce)").matches){
     return;
@@ -148,7 +118,7 @@ function initRevealOnScroll(){
 
   targets.forEach((el, index) => {
     el.classList.add("reveal-on-scroll");
-    el.style.transitionDelay = `${Math.min(index * 35, 210)}ms`;
+    el.style.transitionDelay = `${Math.min(index * 30, 150)}ms`;
   });
 
   const observer = new IntersectionObserver((entries) => {
@@ -158,8 +128,8 @@ function initRevealOnScroll(){
       observer.unobserve(entry.target);
     });
   }, {
-    threshold: 0.12,
-    rootMargin: "0px 0px -8% 0px"
+    threshold: 0.08,
+    rootMargin: "0px 0px -4% 0px"
   });
 
   targets.forEach((el) => observer.observe(el));
@@ -182,45 +152,6 @@ function initHeaderMiniPromo(){
   });
 
   observer.observe(hero);
-}
-
-function initParallaxBackground(){
-  if(document.querySelector(".parallax-scene")) return;
-
-  const scene = document.createElement("div");
-  scene.className = "parallax-scene";
-  scene.setAttribute("aria-hidden", "true");
-  scene.innerHTML = [
-    '<div class="parallax-layer parallax-layer--sky"></div>',
-    '<div class="parallax-layer parallax-layer--mid"></div>',
-    '<div class="parallax-layer parallax-layer--front"></div>'
-  ].join("");
-
-  document.body.prepend(scene);
-
-  if(window.matchMedia && window.matchMedia("(prefers-reduced-motion: reduce)").matches){
-    return;
-  }
-
-  let ticking = false;
-
-  const update = () => {
-    const scrollY = window.scrollY || window.pageYOffset || 0;
-    scene.style.setProperty("--parallax-sky-y", `${scrollY * -0.08}px`);
-    scene.style.setProperty("--parallax-mid-y", `${scrollY * -0.22}px`);
-    scene.style.setProperty("--parallax-front-y", `${scrollY * -0.4}px`);
-    ticking = false;
-  };
-
-  const requestUpdate = () => {
-    if(ticking) return;
-    ticking = true;
-    window.requestAnimationFrame(update);
-  };
-
-  update();
-  window.addEventListener("scroll", requestUpdate, { passive: true });
-  window.addEventListener("resize", requestUpdate);
 }
 
 /* Home */
@@ -253,10 +184,10 @@ async function renderHome(){
     <div class="item">
       <div class="top">
         <div class="title">${escapeHtml(e.title||"")}</div>
-        <div class="meta">${escapeHtml(niceDate(e.date||today))}${e.time ? " • " + escapeHtml(e.time) : ""}</div>
+        <div class="meta">${escapeHtml(niceDate(e.date||today))}${e.time ? "  " + escapeHtml(e.time) : ""}</div>
       </div>
       <div class="body">
-        ${e.location ? `<div><span class="btn btn--static">📍 ${escapeHtml(e.location)}</span></div>` : ""}
+        ${e.location ? `<div><span class="btn btn--static"> ${escapeHtml(e.location)}</span></div>` : ""}
         ${e.description ? `<div class="mt-2">${escapeHtml(e.description)}</div>` : ""}
       </div>
     </div>
@@ -317,7 +248,7 @@ function renderDayEvents(dateISO){
         <div class="meta">${e.time ? escapeHtml(e.time) : ""}</div>
       </div>
       <div class="body">
-        ${e.location ? `<div><span class="btn btn--static">📍 ${escapeHtml(e.location)}</span></div>` : ""}
+        ${e.location ? `<div><span class="btn btn--static"> ${escapeHtml(e.location)}</span></div>` : ""}
         ${e.description ? `<div class="mt-2">${escapeHtml(e.description)}</div>` : ""}
       </div>
     </div>
@@ -423,9 +354,7 @@ async function renderEventsCalendar(){
 }
 
 document.addEventListener("DOMContentLoaded", async () => {
-  initParallaxBackground();
   initNavToggle();
-  initClickSound();
   initFacebookPhotoLinks();
   initFacebookPageEmbeds();
   initRevealOnScroll();

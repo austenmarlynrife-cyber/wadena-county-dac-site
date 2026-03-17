@@ -1,9 +1,12 @@
-<!doctype html>
+﻿<!doctype html>
 <html lang="en">
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width,initial-scale=1" />
   <title>Wadena County DAC</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;600;700&family=Source+Sans+3:wght@500;600;700&display=swap" rel="stylesheet" />
   <link rel="stylesheet" href="styles.css" />
 </head>
 <body>
@@ -22,333 +25,272 @@
 
       <nav id="primary-nav" class="primary-nav" aria-label="Primary navigation">
         <div class="links">
-  <details class="dd">
-    <summary>About</summary>
-    <div class="dd-menu">
-      <a href="index.html#mission">Mission</a>
-      <a href="index.html#staff">Staff</a>
-      <a href="index.html#contact">Contact</a>
-    </div>
-  </details>
+          <details class="dd">
+            <summary>About Us</summary>
+            <div class="dd-menu">
+              <a href="index.html#mission">Mission</a>
+              <a href="index.html#staff">Staff</a>
+              <a href="index.html#contact">Contact</a>
+            </div>
+          </details>
 
-  <details class="dd">
-    <summary>Programs</summary>
-    <div class="dd-menu">
-      <a href="programs.html#services">Services & Activities</a>
-      <a href="programs.html#eligibility">Eligibility / Referrals</a>
-      <a href="programs.html#transportation">Transportation</a>
-      <a href="custom-orders.html">Custom Products</a>
-    </div>
-  </details>
+          <details class="dd">
+            <summary>Services</summary>
+            <div class="dd-menu">
+              <a href="programs.html#services">Services &amp; Activities</a>
+              <a href="programs.html#eligibility">Eligibility / Referrals</a>
+              <a href="programs.html#transportation">Transportation</a>
+              <a href="custom-orders.html">Custom Products</a>
+            </div>
+          </details>
 
-  <a href="events.html">Events</a>
-  <a href="announcements.html">Updates</a>
+          <a href="treasure-trove.html">Treasure Trove</a>
+          <a href="announcements.html">News</a>
+          <a href="events.html">Events</a>
 
-  <details class="dd">
-    <summary>Support</summary>
-    <div class="dd-menu">
-      <a href="https://www.givemn.org/organization/wadena-county-developmental-achievement-center" target="_blank" rel="noopener">Donate</a>
-      <a href="volunteer.html">Volunteer</a>
-      <a href="apply.html">Apply Now</a>
-    </div>
-  </details>
-</div>
+          <details class="dd">
+            <summary>Support</summary>
+            <div class="dd-menu">
+              <a href="https://www.givemn.org/organization/wadena-county-developmental-achievement-center" target="_blank" rel="noopener">Donate</a>
+              <a href="volunteer.html">Volunteer</a>
+              <a href="apply.html">Apply Now</a>
+            </div>
+          </details>
+        </div>
       </nav>
 
-      <a class="header-mini-promo" href="custom-orders.html" aria-label="Open custom buttons, pins, and napkins page">
-        <img src="images/hero-custom-products.svg" alt="Custom products preview" />
-        <span class="header-mini-copy">
-          <strong>Custom Buttons & Napkins</strong>
-          <span>Order now</span>
-        </span>
-      </a>
-
-      <a class="btn primary nav-cta" href="events.html">View calendar</a>
+      <a class="btn primary nav-cta" href="https://www.givemn.org/organization/wadena-county-developmental-achievement-center" target="_blank" rel="noopener">Donate</a>
     </div>
   </header>
 
- <main id="main">
-  <div class="wrap">
+  <main id="main">
+    <div class="wrap">
+      <section class="hero">
+        <div class="hero-banner">
+          <img class="hero-banner-image" src="images/hero-user-upload.png" alt="Photo of supportive community-based care and activity engagement." loading="eager" />
+          <div class="hero-overlay">
+            <div class="hero-copy hero-copy--banner">
+              <h1>
+                <span class="hero-title-line">Supporting Individuals</span>
+                <span class="hero-title-line hero-title-line--italic">with Disabilities</span>
+              </h1>
+              <div class="hero-divider" aria-hidden="true"></div>
+              <p class="sub sub--lead hero-tagline">Providing Opportunities for Growth and Inclusion</p>
+              <div class="hero-actions">
+                <a class="btn primary" href="programs.html">Learn More</a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
 
-    <!-- HERO -->
-    <section class="card pad hover hero">
-      <div class="hero-layout">
-        <div class="hero-copy">
-          <div class="kicker"><span class="dot"></span> Community • Programs • Support</div>
-          <img class="hero-logo" src="images/wcdac-logo.svg" alt="Wadena County DAC logo" />
-          <h1 class="sr-only">Wadena County DAC</h1>
-          <p class="sub sub--lead">Where Challenges Meet Opportunities</p>
-          <p class="sub sub--intro">
-            We support individuals through community-based programming, skill-building, and meaningful daily activities.
-            Check announcements for quick updates, explore upcoming events, and now order custom buttons, pins, and napkins for campaigns, teams, weddings, and graduations.
+      <a class="treasure-banner" href="treasure-trove.html" aria-label="Visit Treasure Trove thrift store page">
+        <img src="images/treasure-banner.jpg" alt="Photo banner of a thrift store shopping area." loading="lazy" />
+        <span class="treasure-banner-overlay">
+          <span class="treasure-banner-title">Visit the Treasure Trove Thrift Store</span>
+          <span class="treasure-banner-subtitle">Great deals, unique finds, and local support for Wadena County DAC</span>
+        </span>
+      </a>
+
+      <section class="grid3 section--spaced home-feature-grid">
+        <article class="card hover home-feature-card">
+          <div class="home-feature-bar home-feature-bar--gold">Announcements</div>
+          <div class="home-feature-body">
+            <div id="homeAnnouncements" class="list"></div>
+            <div class="button-group home-feature-actions">
+              <a class="btn primary" href="announcements.html">Read More</a>
+            </div>
+          </div>
+        </article>
+
+        <article class="card hover home-feature-card home-feature-card--facebook" id="facebook-feed">
+          <div class="home-feature-bar home-feature-bar--green">Follow Us on Facebook</div>
+          <div class="home-feature-body">
+            <div class="facebook-frame-wrap home-facebook-frame">
+              <iframe
+                title="Wadena County DAC Facebook feed"
+                data-facebook-page-embed
+                data-height="250"
+                loading="lazy"
+                allow="clipboard-write; encrypted-media; picture-in-picture; web-share"
+                referrerpolicy="strict-origin-when-cross-origin"
+                scrolling="no"></iframe>
+            </div>
+            <div class="button-group home-feature-actions">
+              <a class="btn" data-facebook-page-link href="#">Open Facebook</a>
+            </div>
+          </div>
+        </article>
+
+        <article class="card hover home-feature-card">
+          <div class="home-feature-bar home-feature-bar--gold">Upcoming Events</div>
+          <div class="home-feature-body">
+            <div id="homeEvents" class="list"></div>
+            <div class="button-group home-feature-actions">
+              <a class="btn primary" href="events.html">View Calendar</a>
+            </div>
+          </div>
+        </article>
+      </section>
+
+      <section class="grid section--spaced">
+        <div class="card pad hover" id="programs">
+          <h2>Programs &amp; Services</h2>
+          <p class="sub">
+            Daily activities, community engagement, and personalized support plans that encourage independence and participation.
           </p>
 
-          <div class="hero-actions">
-            <a class="btn primary" href="events.html">View events</a>
-            <a class="btn primary" href="announcements.html">Read announcements</a>
-            <a class="btn" href="custom-orders.html">Custom products</a>
+          <div class="card-grid">
+            <a class="item item-link" href="programs.html#services" aria-label="Services and activities information">
+              <div class="title">Services &amp; Activities</div>
+              <div class="body">Structured routines and engaging activities that help participants build skills and confidence.</div>
+            </a>
+
+            <a class="item item-link" href="programs.html#eligibility" id="eligibility" aria-label="Eligibility and referrals information">
+              <div class="title">Eligibility / Referrals</div>
+              <div class="body">We can help families and case teams navigate referrals and next steps in a friendly, clear way.</div>
+            </a>
+
+            <a class="item item-link" href="programs.html#transportation" id="transportation" aria-label="Transportation information">
+              <div class="title">Transportation</div>
+              <div class="body">Transportation options vary. Reach out and we will help you map out what is available.</div>
+            </a>
           </div>
-        </div>
 
-        <a class="hero-spotlight" href="custom-orders.html" aria-label="Open custom buttons, pins, and napkins pricing and inquiry page">
-          <div class="hero-spotlight-badge">Now taking orders</div>
-          <img class="hero-spotlight-art" src="images/hero-custom-products.svg" alt="Graphic preview of custom buttons, pins, and napkins." loading="eager" />
-          <div class="hero-spotlight-copy">
-            <div class="hero-spotlight-title">Custom Buttons, Pins & Napkins</div>
-            <div class="hero-spotlight-text">Campaigns, sports teams, weddings, graduations, and events.</div>
-            <div class="hero-spotlight-link">See pricing & order details</div>
-          </div>
-        </a>
-      </div>
-    </section>
-
-    <!-- TWO PATHWAYS (OHI-like) -->
-    <section class="grid section--spaced">
-      <div class="card pad hover" id="programs">
-        <h2>Programs & Services</h2>
-        <p class="sub">
-          Daily programming, community activities, skill-building, and supportive services designed to help people
-          stay connected and thrive.
-        </p>
-
-        <div class="card-grid">
-  <a class="item item-link" href="programs.html#services" aria-label="Services and activities information">
-    <div class="title">Services & Activities</div>
-    <div class="body">
-      We offer structured daily programming that supports independence, connection, and confidence. Activities may include
-      crafts, music, community outings, life skills, volunteering, and opportunities to build routines that work for each person.
-    </div>
-  </a>
-
-  <a class="item item-link" href="programs.html#eligibility" id="eligibility" aria-label="Eligibility and referrals information">
-    <div class="title">Eligibility / Referrals</div>
-    <div class="body">
-      If you’re unsure where to start, we can help. Contact us and we’ll walk you through eligibility and referral steps,
-      including how to coordinate with county or case management support.
-    </div>
-  </a>
-
-  <a class="item item-link" href="programs.html#transportation" id="transportation" aria-label="Transportation information">
-    <div class="title">Transportation</div>
-    <div class="body">
-      Transportation options vary. If transportation is a need, reach out and we’ll help clarify what’s available and what
-      alternatives might work for your situation.
-    </div>
-  </a>
-</div>
-
-        <div class="button-group">
-          <a class="btn primary" href="intake.html">Start intake form</a>
-          <a class="btn" href="programs.html">Learn more</a>
-        </div>
-      </div>
-
-      <div class="card pad hover" id="volunteer">
-        <h2>Support Us</h2>
-        <p class="sub">
-          Your support helps us expand opportunities and strengthen community connections.
-        </p>
-
-       <div class="card-grid">
-  <a class="item item-link" href="https://www.givemn.org/organization/wadena-county-developmental-achievement-center" target="_blank" rel="noopener" aria-label="Donate via GiveMN">
-    <div class="title">Donate</div>
-    <div class="body">
-      Your donation helps create more opportunities—more activities, more community connections, and more support for the people we serve.
-      Contributions are securely processed through GiveMN.
-    </div>
-  </a>
-
-  <a class="item item-link" href="volunteer.html" aria-label="Open volunteer page">
-    <div class="title">Volunteer</div>
-    <div class="body">
-      Volunteers help make the day brighter—whether it’s assisting at events, supporting activities, or helping with community projects.
-      If you’re interested, contact us and we’ll connect you with current needs.
-    </div>
-  </a>
-
-  <a class="item item-link" href="apply.html" id="employment" aria-label="Open employment application page">
-    <div class="title">Employment</div>
-    <div class="body">
-      We occasionally have openings for caring, dependable staff. Check our announcements for hiring posts, or reach out directly for details.
-    </div>
-  </a>
-</div>
-
-        <div class="button-group">
-          <a class="btn primary" href="https://www.givemn.org/organization/wadena-county-developmental-achievement-center" target="_blank" rel="noopener">Donate</a>
-          <a class="btn primary" href="volunteer.html">Volunteer</a>
-          <a class="btn primary" href="apply.html">Apply Now</a>
-        </div>
-      </div>
-    </section>
-
-    <!-- CUSTOM PRODUCTS -->
-    <section class="card pad hover section--spaced" id="custom-products">
-      <div class="section-header">
-        <div>
-          <h2>Custom Buttons, Pins & Napkins</h2>
-          <p class="sub">We create custom products for campaigns, sports teams, weddings, graduations, schools, and community events.</p>
-        </div>
-        <a class="btn primary" href="custom-orders.html">Pricing & Inquiry</a>
-      </div>
-
-      <div class="product-grid" aria-label="Custom product options">
-        <article class="product-card">
-          <img class="product-media" src="images/custom-buttons-pins.svg" alt="Custom buttons and pins for campaigns and sports." loading="lazy" />
-          <h3>Campaign & Sports Buttons/Pins</h3>
-          <p class="sub">High-visibility custom pin-back buttons and pins for teams, clubs, and campaign events.</p>
           <div class="button-group">
-            <a class="btn" href="custom-orders.html#buttons-pins">View button pricing</a>
-            <a class="btn primary" href="custom-orders.html#orderForm">Inquire to order</a>
+            <a class="btn primary" href="intake.html">Start Intake Form</a>
+            <a class="btn" href="programs.html">Learn More</a>
           </div>
-        </article>
+        </div>
 
-        <article class="product-card">
-          <img class="product-media" src="images/custom-napkins.svg" alt="Custom wedding and graduation napkins." loading="lazy" />
-          <h3>Wedding & Graduation Napkins</h3>
-          <p class="sub">Personalized napkins with names, dates, school colors, or event branding for milestone celebrations.</p>
+        <div class="card pad hover" id="volunteer">
+          <h2>Support Us</h2>
+          <p class="sub">Your support fuels programs, outings, and opportunities for the people we serve.</p>
+
+          <div class="card-grid">
+            <a class="item item-link" href="https://www.givemn.org/organization/wadena-county-developmental-achievement-center" target="_blank" rel="noopener" aria-label="Donate via GiveMN">
+              <div class="title">Donate</div>
+              <div class="body">Every gift helps us provide meaningful, participant-focused programming in Wadena County.</div>
+            </a>
+
+            <a class="item item-link" href="volunteer.html" aria-label="Open volunteer page">
+              <div class="title">Volunteer</div>
+              <div class="body">Bring your time and talents to events, activities, and projects that brighten someones day.</div>
+            </a>
+
+            <a class="item item-link" href="apply.html" id="employment" aria-label="Open employment application page">
+              <div class="title">Employment</div>
+              <div class="body">Join a compassionate team that values dignity, consistency, and real relationships.</div>
+            </a>
+          </div>
+
           <div class="button-group">
-            <a class="btn" href="custom-orders.html#napkins">View napkin pricing</a>
-            <a class="btn primary" href="custom-orders.html#orderForm">Inquire to order</a>
-          </div>
-        </article>
-      </div>
-    </section>
-
-    <!-- ANNOUNCEMENTS (like OHI News) -->
-    <section class="card pad hover section--spaced">
-      <div class="section-header">
-        <div>
-          <h2>Announcements</h2>
-          <p class="sub">Closures, reminders, hiring, and quick updates.</p>
-        </div>
-        <div class="button-group">
-          <a class="btn" href="announcements.html">View updates</a>
-          <a class="btn" href="announcements.html">View all</a>
-        </div>
-      </div>
-
-      <hr class="sep" />
-      <div id="homeAnnouncements" class="list"></div>
-    </section>
-
-    <section class="card pad hover section--spaced" id="facebook-feed">
-      <div class="section-header">
-        <div>
-          <h2>Live from Facebook</h2>
-          <p class="sub">See the latest timeline posts, event reminders, photos, and community updates as they happen.</p>
-        </div>
-        <a class="btn primary" data-facebook-page-link href="#">Open Facebook</a>
-      </div>
-
-      <div class="facebook-feed-grid">
-        <div class="facebook-frame-wrap">
-          <iframe
-            title="Wadena County DAC Facebook feed"
-            data-facebook-page-embed
-            data-height="620"
-            loading="lazy"
-            allow="clipboard-write; encrypted-media; picture-in-picture; web-share"
-            referrerpolicy="strict-origin-when-cross-origin"
-            scrolling="no"></iframe>
-        </div>
-
-        <div class="item">
-          <div class="title">Why this helps</div>
-          <div class="body">
-            This live feed gives families, supporters, and community members a quick way to see recent activity without leaving the site first.
-          </div>
-          <div class="body mt-2">
-            If the embedded feed does not load on a device, use the button above to open the Facebook page directly.
+            <a class="btn primary" href="https://www.givemn.org/organization/wadena-county-developmental-achievement-center" target="_blank" rel="noopener">Donate</a>
+            <a class="btn" href="volunteer.html">Volunteer</a>
+            <a class="btn" href="apply.html">Apply Now</a>
           </div>
         </div>
-      </div>
-    </section>
+      </section>
 
-    <!-- EVENTS PREVIEW -->
-    <section class="card pad hover section--spaced">
-      <div class="section-header">
-        <div>
-          <h2>Upcoming Events</h2>
-          <p class="sub">See what’s happening this month and beyond.</p>
+      <section class="card pad hover section--spaced" id="custom-products">
+        <div class="section-header">
+          <div>
+            <h2>Custom Buttons, Pins &amp; Napkins</h2>
+            <p class="sub">Campaigns, teams, weddings, graduations, and community events. Orders also support DAC programs.</p>
+          </div>
+          <a class="btn primary" href="custom-orders.html">Pricing &amp; Inquiry</a>
         </div>
-        <a class="btn primary" href="events.html">Open calendar</a>
-      </div>
 
-      <hr class="sep" />
-      <div id="homeEvents" class="list"></div>
-    </section>
+        <div class="product-grid" aria-label="Custom product options">
+          <article class="product-card">
+            <img class="product-media" src="images/custom-buttons-user.png" alt="Photo of custom buttons available for order." loading="lazy" />
+            <h3>Buttons &amp; Pins</h3>
+            <p class="sub">Great for elections, school clubs, teams, and event promotions.</p>
+            <div class="button-group">
+              <a class="btn" href="custom-orders.html#buttons-pins">View pricing</a>
+              <a class="btn primary" href="custom-orders.html#orderForm">Inquire to order</a>
+            </div>
+          </article>
 
-    <!-- PHOTOS -->
-    <section class="card pad hover section--spaced">
-      <h2 id="mission">Our Mission</h2>
-      <p class="sub">
-        Our mission is to provide person-centered day training and habilitation that helps adults with disabilities build life skills, strengthen independence, and participate fully in community life. At Wadena County DAC, we create meaningful daily opportunities through supportive programming, community connection, and practical services that honor each person’s goals, choices, and dignity.
-      </p>
+          <article class="product-card">
+            <img class="product-media" src="images/custom-buttons-napkins-user.png" alt="Photo of custom buttons and napkins available for order." loading="lazy" />
+            <h3>Personalized Napkins</h3>
+            <p class="sub">A polished touch for weddings, graduations, open houses, and celebrations.</p>
+            <div class="button-group">
+              <a class="btn" href="custom-orders.html#napkins">View pricing</a>
+              <a class="btn primary" href="custom-orders.html#orderForm">Inquire to order</a>
+            </div>
+          </article>
+        </div>
+      </section>
 
-      <hr class="sep" />
-
-      <h2>Community in Action</h2>
-      <p class="sub">A few community scenes highlighting inclusive work, participation, and local events. Click any image to open our Facebook photo page.</p>
-
-      <div class="gallery-grid" aria-label="Community photo gallery">
-        <a class="gallery-link" data-facebook-photos-link href="#" aria-label="Open Facebook photos">
-          <figure class="gallery-card">
-            <img src="images/community-store-work.svg" alt="Adults with disabilities working and serving in a local store setting." loading="lazy" />
-            <figcaption>Work Experience in Local Stores</figcaption>
-          </figure>
-        </a>
-        <a class="gallery-link" data-facebook-photos-link href="#" aria-label="Open Facebook photos">
-          <figure class="gallery-card">
-            <img src="images/community-parade.svg" alt="Community parade with adults with disabilities participating and celebrating." loading="lazy" />
-            <figcaption>Parade Participation and Community Pride</figcaption>
-          </figure>
-        </a>
-        <a class="gallery-link" data-facebook-photos-link href="#" aria-label="Open Facebook photos">
-          <figure class="gallery-card">
-            <img src="images/community-neighborhood.svg" alt="Inclusive neighborhood volunteering scene with adults with disabilities." loading="lazy" />
-            <figcaption>Neighborhood Engagement and Service</figcaption>
-          </figure>
-        </a>
-      </div>
-    </section>
-
-    <!-- STAFF + CONTACT -->
-    <section class="card pad hover section--spaced" id="staff">
-      <h2>Staff & Contact</h2>
-      <p class="sub">Add staff names/titles here, plus the best way to reach the team.</p>
-
-      <div class="pills">
-        <span class="pill">👤 Director: (name)</span>
-        <span class="pill">👤 Program Lead: (name)</span>
-      </div>
-
-      <hr class="sep" />
-
-      <div id="contact">
-        <h2>Contact</h2>
+      <section class="card pad hover section--spaced" id="mission">
+        <h2>Our Mission</h2>
         <p class="sub">
-          Call <strong>218-837-5182</strong> or email <strong>roseb@wcdac.com</strong>.
-          (We can add a working contact form later if you want.)
+          We provide person-centered day training and habilitation that helps adults with disabilities strengthen life skills, grow independence,
+          and stay connected to their communities. Our approach is practical, welcoming, and built around each persons goals.
         </p>
+
+        <hr class="sep" />
+
+        <h2>Community in Action</h2>
+        <p class="sub">A few snapshots of participation, teamwork, and local engagement. Select any image to open our Facebook photos.</p>
+
+        <div class="gallery-grid" aria-label="Community photo gallery">
+          <a class="gallery-link" data-facebook-photos-link href="#" aria-label="Open Facebook photos">
+            <figure class="gallery-card">
+              <img src="images/community-store.jpg" alt="Photo of community members working in a local store setting." loading="lazy" />
+              <figcaption>Work Experience in Local Stores</figcaption>
+            </figure>
+          </a>
+          <a class="gallery-link" data-facebook-photos-link href="#" aria-label="Open Facebook photos">
+            <figure class="gallery-card">
+              <img src="images/community-parade.jpg" alt="Photo of community parade participation." loading="lazy" />
+              <figcaption>Parade Participation and Community Pride</figcaption>
+            </figure>
+          </a>
+          <a class="gallery-link" data-facebook-photos-link href="#" aria-label="Open Facebook photos">
+            <figure class="gallery-card">
+              <img src="images/community-neighborhood.jpg" alt="Photo of neighborhood volunteering and engagement." loading="lazy" />
+              <figcaption>Neighborhood Engagement and Service</figcaption>
+            </figure>
+          </a>
+        </div>
+      </section>
+
+      <section class="card pad hover section--spaced" id="staff">
+        <h2>Staff &amp; Contact</h2>
+        <p class="sub">Our team is here to help families, guardians, and referral partners take the next step with confidence.</p>
 
         <div class="pills">
-          <span class="pill">📍 305 5th Street SW, Sebeka, MN 56477</span>
-          <span class="pill">📬 PO Box 235</span>
-          <span class="pill">📞 218-837-5182</span>
-          <span class="pill">✉️ roseb@wcdac.com</span>
+          <span class="pill">Director: (name)</span>
+          <span class="pill">Program Lead: (name)</span>
         </div>
-      </div>
-    </section>
 
-  </div>
-</main>
+        <hr class="sep" />
+
+        <div id="contact">
+          <h2>Contact</h2>
+          <p class="sub">Call <strong>218-837-5182</strong> or email <strong>roseb@wcdac.com</strong>.</p>
+          <div class="pills">
+            <span class="pill">305 5th Street SW, Sebeka, MN 56477</span>
+            <span class="pill">PO Box 235</span>
+            <span class="pill">218-837-5182</span>
+            <span class="pill">roseb@wcdac.com</span>
+          </div>
+        </div>
+      </section>
+
+    </div>
+  </main>
 
   <footer>
-    <div class="wrap">© <span id="year"></span> Wadena County DAC</div>
+    <div class="wrap">Copyright <span id="year"></span> Wadena County DAC</div>
   </footer>
 
   <script>document.getElementById("year").textContent = new Date().getFullYear();</script>
   <script src="app.js"></script>
 </body>
 </html>
+
+
